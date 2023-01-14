@@ -1,47 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>King`s阅览室</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://www.zibbo.xyz/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>1985-10-26T08:15:00.000Z</updated>
-  <id>http://example.com/</id>
+  <link href="http://www.zibbo.xyz/"/>
+  <updated>2023-01-14T13:09:39.820Z</updated>
+  <id>http://www.zibbo.xyz/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>King</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2023/01/13/hello-world/"/>
-    <id>http://example.com/2023/01/13/hello-world/</id>
-    <published>2023-01-13T13:51:01.360Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>关于婚姻</title>
-    <link href="http://example.com/2023/01/13/02/"/>
-    <id>http://example.com/2023/01/13/02/</id>
+    <link href="http://www.zibbo.xyz/2023/01/13/02/"/>
+    <id>http://www.zibbo.xyz/2023/01/13/02/</id>
     <published>2023-01-13T07:42:28.000Z</published>
-    <updated>2023-01-13T08:08:04.335Z</updated>
+    <updated>2023-01-14T13:09:39.820Z</updated>
     
     <content type="html"><![CDATA[<p>钱钟书先生说：“婚姻是一座围城，城外的人想进去，城里的人想出来。”</p><p>婚姻是美好的，也是琐碎的，每个人都有着不同的理解和选择。</p><p>有人勇敢尝试，收获幸福；</p><p>有人遇人不淑，中途分离；</p><p>还有人甘居城外，独自浪漫。</p>]]></content>
     
@@ -63,12 +43,12 @@
   
   <entry>
     <title>小王子</title>
-    <link href="http://example.com/2023/01/12/%E5%B0%8F%E7%8E%8B%E5%AD%90/"/>
-    <id>http://example.com/2023/01/12/%E5%B0%8F%E7%8E%8B%E5%AD%90/</id>
+    <link href="http://www.zibbo.xyz/2023/01/12/%E5%B0%8F%E7%8E%8B%E5%AD%90/"/>
+    <id>http://www.zibbo.xyz/2023/01/12/%E5%B0%8F%E7%8E%8B%E5%AD%90/</id>
     <published>2023-01-12T15:04:21.000Z</published>
-    <updated>2023-01-12T15:05:21.469Z</updated>
+    <updated>2023-01-14T13:21:31.963Z</updated>
     
-    <content type="html"><![CDATA[<p>1、当人情绪低落时候，喜欢看日落。</p><p>When people are in a low mood, they like to watch sunset.</p><p>2、星星真美，因为有一朵看不见的花。</p><p>The stars are beautiful because there is a flower that can’t be seen.</p><p>3、一直朝前走，也走不了多远。</p><p>I can’t go far until I go forward.</p><p>4、当他抬头仰望繁星时，便会心满意足。</p><p>When he looks up at the stars, he will be satisfied.</p><p>5、即使在有人的地方，我们依然孤单。</p><p>Even in places where there are people, we are still alone.</p><p>6、你们很美，但你们是空虚的。</p><p>You are beautiful, but you are empty.</p><p>7、可怕的不是长大，是遗忘。</p><p>It’s not growing up, it’s forgetting.</p><p>8、你知道，悲伤的人会爱上日落的。</p><p>You know, sad people will fall in love with sunset.</p><p>9、夜充满了威胁，邪风一吹，立刻腐烂。</p><p>Night is full of threats, evil wind blows, immediately decay.</p><p>10、每个人，都有一片属于自己的星空。</p><p>Everyone, has a star of their own.</p><p>11、我该从行动，而非言语来判别是非。</p><p>I should judge right and wrong from action, not words.</p><p>12、对旅人而言，星星是向导。</p><p>For travelers, stars are guides.</p><p>13、能快乐旅行的，一定是轻装旅行的人。</p><p>Those who can travel happily must be light-weight travelers.</p><p>14、有一朵玫瑰，我想，她把我驯服了。</p><p>There is a rose, I think, she tamed me.</p><p>15、人难过的时候，总是爱看日落。</p><p>When people are sad, they always love to watch sunset.</p><p>16、我不需要你，你也同样用不着我。</p><p>I don’t need you, and you don’t need me either.</p><p>17、一切都会好起来的，你知道的。</p><p>Everything will be fine, you know.</p><p>18、当一个人伤心，他会喜欢日落。</p><p>When a person is sad, he will like sunset.</p><p>19、时间越临近，我就越来越快乐。</p><p>The closer time comes, the happier I am.</p><p>20、大人们都是这个样子，以衣冠取人。</p><p>The big people are all like this, taking people with their clothes.</p><p>21、在沙漠上，真有点孤独。</p><p>It’s a little lonely in the desert.</p><p>22、真正重要的东西，肉眼是看不到的。</p><p>What really matters is invisible to the naked eye.</p><p>23、最重要的东西，是肉眼看不见的。</p><p>The most important thing is invisible to the naked eye.</p><p>24、忘记朋友是可悲的，不是谁都有朋友。</p><p>It’s sad to forget friends, not everyone has friends.</p><p>25、路一旦打通，不会没有人走。</p><p>Once the road is opened, no one will go.</p><p>26、对我那位商人来说，它们就是财富。</p><p>For my businessman, they are wealth.</p><p>27、当我们开始追寻，我们就已经在失去。</p><p>When we start to pursue, we are already losing.</p><p>28、最大的问题不是长大，而是遗忘。</p><p>The biggest problem is not to grow up, but to forget.</p><p>29、我太年轻了，甚至不懂怎么去爱她。</p><p>I’m too young to even understand how to love her.</p><p>30、上场，登上舞台。</p><p>Play, get on the stage.</p><p>小王子经典语录</p><p>1、在我眼里，全世界只有你是独一无二的。</p><p>2、因为是心甘情愿地沉溺，即使死亡也无须被拯救。</p><p>3、人类已经忘记了这个真理，但你不要忘记它。</p><p>4、我与你相见的可能，是这世上的七十亿分之一。</p><p>5、一旦有人将娃娃拿走，他们就会号啕大哭。</p><p>6、你有一头金发，如果你驯养我，那该有多么美好啊！</p><p>7、你知道，当人们感到非常苦闷时，总是喜欢日落的。</p><p>8、如果你想要驯服一个人，就要冒着掉眼泪的危险。</p><p>9、人生，总会有不期而遇的温暖，和生生不息的希望。</p><p>10、这是最难做到的，审判自己比审判别人难得多。</p><p>11、我们都是傻痴痴的小狐狸，徒具一副精明的外表。</p><p>12、我们只有感动，却不知道感动来自何方。</p><p>13、我还是太年轻了，甚至不懂得怎么爱他。</p><p>14、我应该根据她的行为，而不是根据她的话来判断她。</p><p>15、只有用心，才能看清楚。重要的东西是眼睛看不见的。</p><p>16、要对一个人下定论，不应听其言，而应观其行。</p><p>17、只有用心才能体会的，内在的本质是眼睛看不到的。</p><p>18、如果选择被驯养，那就要承担一点哭泣的风险。</p><p>19、你知道当一个人情绪低落的时候，他会格外喜欢看日落。</p><p>20、忘记朋友是一件令人伤心的事情，并不是人人都有朋友的。</p><p>21、因为你为玫瑰花了那么多时间，它才变得那么重要。</p><p>22、我心爱的花在那里，在那颗遥远的星星上。</p><p>23、对学者而言，星星则是一门待解的难题。</p><p>24、如果你想和别人制造羁绊，就必须承受流泪的风险。</p><p>25、如果你要是驯服了我，我的生活就一定会是欢快的。</p><p>26、眼睛是什么也看不见的，一定要用心去看。</p><p>27、如果我想结识蝴蝶，我得忍受两三只毛毛虫。</p><p>28、在沙漠里有些孤独，在人群里也孤独。</p><p>29、你明白，路太远，我无法带着躯体走，太沉重。</p><p>30、如果想要提高英语，我们就不应该害怕犯错误。</p><p>31、事实是，我以前不知道怎么去看待事物！</p><p>32、忘记一个朋友真令人伤心，并非人人都有过朋友。</p><p>33、对我们懂得生活的人来说，数字都是些无关紧要的事。</p><p>34、忘记朋友是可悲的，并不是每个人都会有一个知心朋友。</p><p>35、规律是从经验而来的，在经验以前，决不可能认识规律。</p><p>36、一个人想要耍点小聪明的时候，就会显得有点不真实。</p><p>37、生命中重要的事情，你不能用眼睛看，只能用心灵看。</p><p>38、花总是表里不一，而我太年轻了，不知道该怎样爱护她。</p><p>39、人经过选择，会满意和喜欢生命的机缘。</p><p>40、要想结识蝴蝶，就得先忍受两三只毛毛虫的叮咬。</p><p>41、把心爱的人放在心里，他便永远活在你的心中。</p><p>42、所有的大人都曾经是小孩，虽然，只有少数人记得。</p><p>43、当一个人情绪低落的时候，他会格外喜欢看日落。</p><p>44、你知道，我的花，我是要对她负责的！</p><p>45、虽然你伤了我的心，但我原谅你的所作所为。</p><p>46、她只有四根微不足道的刺，保护自己，抵抗外敌。</p><p>47、人不应该听花说些什么，只要欣赏她们，闻闻花就够了。</p><p>48、你会爱这满天的星星，所有的星星都会是你的朋友。</p><p>49、夜晚，我喜欢聆听星星，它们就像五亿个小铃铛一样。</p><p>50、每一个人都有自己的星星，但其中的含义却因人而异。</p><p>51、所有的大人都曾经是小孩，虽然，只有少数的人记得。</p><p>52、在你看了四十四次日落那天，你很难过吗？</p><p>53、你知道吗，人在难过的时候就会爱上日落。</p><p>54、如果你想要制造羁绊，就得承受流泪的风险。</p><p>55、她向我释放她的香气，展示她的美艳。</p><p>56、他走过一个又一个星球，却始终放不下对她的思念。</p><p>57、我对你来说，也是你的世界里的唯一了。</p><p>58、当一个人炫耀他自己的智慧时，往往到会误入歧途。</p><p>59、使沙漠显得美丽的，是它在什么地方藏着一口水井。</p><p>60、看，我的那颗星星，恰好就在头上却距离如此遥远！</p><p>61、所有的大人都是孩子，只要你未曾遗忘。</p><p>62、黑夜是富裕的，充满芳香、沉睡的羔羊、尚无颜色的花朵。</p><p>63、当一个人情绪低落时，他会格外喜欢看日落！</p><p>64、想起你，我会很幸福的，你知道我也看着星星啊。</p><p>65、沙漠之所以美丽，是因为在某个角落藏着一口井。</p><p>66、一旦你驯服了什么，就要对她负责，永远的负责。</p><p>67、沙漠之所以美丽，是因为在它的某个角落隐藏着一口井。</p><p>68、你花费了时间，才让你的花费物超所值。</p><p>69、我应该以她的行为，而不是她的言语来判断她的一切。</p><p>70、生活才不是生命荒唐的编号，生活的意义在于生活本身。</p><p>71、本质的东西是用眼睛看不见的，只能用心去看。</p><p>72、当一个人炫耀他自己的智慧时，往往倒会误入歧途。</p><p>73、总有些人不引人注目，却是出色的信使。</p><p>74、即使快要死了，拥有过一个朋友总是好事。</p><p>75、你，只有你，了解这些星星与众不同的含义。</p><p>76、使生活如此美丽的，是我们藏起来的真诚和童心。</p><p>77、我知道在一个星球上，有那么一个红脸的先生。</p><p>78、我的命令是合理的，所以我有权要别人服从。</p><p>79、原来有一天，向日葵也会想主动放弃太阳。</p><p>80、你什么也不要说，语言是误解的源头。</p>]]></content>
+    <content type="html"><![CDATA[<p>1、当人情绪低落时候，喜欢看日落。</p><p>When people are in a low mood, they like to watch sunset.</p><p>2、星星真美，因为有一朵看不见的花。</p><p>The stars are beautiful because there is a flower that can’t be seen.</p><p>3、一直朝前走，也走不了多远。</p><p>I can’t go far until I go forward.</p><p>4、当他抬头仰望繁星时，便会心满意足。</p><p>When he looks up at the stars, he will be satisfied.</p><p>5、即使在有人的地方，我们依然孤单。</p><p>Even in places where there are people, we are still alone.</p><p>6、你们很美，但你们是空虚的。</p><p>You are beautiful, but you are empty.</p><p>7、可怕的不是长大，是遗忘。</p><p>It’s not growing up, it’s forgetting.</p><p>8、你知道，悲伤的人会爱上日落的。</p><p>You know, sad people will fall in love with sunset.</p><p>9、夜充满了威胁，邪风一吹，立刻腐烂。</p><p>Night is full of threats, evil wind blows, immediately decay.</p><p>10、每个人，都有一片属于自己的星空。</p><p>Everyone, has a star of their own.</p><p>11、我该从行动，而非言语来判别是非。</p><p>I should judge right and wrong from action, not words.</p><p>12、对旅人而言，星星是向导。</p><p>For travelers, stars are guides.</p><p>13、能快乐旅行的，一定是轻装旅行的人。</p><p>Those who can travel happily must be light-weight travelers.</p><p>14、有一朵玫瑰，我想，她把我驯服了。</p><p>There is a rose, I think, she tamed me.</p><p>15、人难过的时候，总是爱看日落。</p><p>When people are sad, they always love to watch sunset.</p><p>16、我不需要你，你也同样用不着我。</p><p>I don’t need you, and you don’t need me either.</p><p>17、一切都会好起来的，你知道的。</p><p>Everything will be fine, you know.</p><p>18、当一个人伤心，他会喜欢日落。</p><p>When a person is sad, he will like sunset.</p><p>19、时间越临近，我就越来越快乐。</p><p>The closer time comes, the happier I am.</p><p>20、大人们都是这个样子，以衣冠取人。</p><p>The big people are all like this, taking people with their clothes.</p><p>21、在沙漠上，真有点孤独。</p><p>It’s a little lonely in the desert.</p><p>22、真正重要的东西，肉眼是看不到的。</p><p>What really matters is invisible to the naked eye.</p><p>23、最重要的东西，是肉眼看不见的。</p><p>The most important thing is invisible to the naked eye.</p><p>24、忘记朋友是可悲的，不是谁都有朋友。</p><p>It’s sad to forget friends, not everyone has friends.</p><p>25、路一旦打通，不会没有人走。</p><p>Once the road is opened, no one will go.</p><p>26、对我那位商人来说，它们就是财富。</p><p>For my businessman, they are wealth.</p><p>27、当我们开始追寻，我们就已经在失去。</p><p>When we start to pursue, we are already losing.</p><p>28、最大的问题不是长大，而是遗忘。</p><p>The biggest problem is not to grow up, but to forget.</p><p>29、我太年轻了，甚至不懂怎么去爱她。</p><p>I’m too young to even understand how to love her.</p><p>30、上场，登上舞台。</p><p>Play, get on the stage.</p><p><img src="https://img2.baidu.com/it/u=3036138966,371898811&fm=253&fmt=auto&app=138&f=JPEG?w=810&h=500"></p><p>1、在我眼里，全世界只有你是独一无二的。</p><p>2、因为是心甘情愿地沉溺，即使死亡也无须被拯救。</p><p>3、人类已经忘记了这个真理，但你不要忘记它。</p><p>4、我与你相见的可能，是这世上的七十亿分之一。</p><p>5、一旦有人将娃娃拿走，他们就会号啕大哭。</p><p>6、你有一头金发，如果你驯养我，那该有多么美好啊！</p><p>7、你知道，当人们感到非常苦闷时，总是喜欢日落的。</p><p>8、如果你想要驯服一个人，就要冒着掉眼泪的危险。</p><p>9、人生，总会有不期而遇的温暖，和生生不息的希望。</p><p>10、这是最难做到的，审判自己比审判别人难得多。</p><p>11、我们都是傻痴痴的小狐狸，徒具一副精明的外表。</p><p>12、我们只有感动，却不知道感动来自何方。</p><p>13、我还是太年轻了，甚至不懂得怎么爱他。</p><p>14、我应该根据她的行为，而不是根据她的话来判断她。</p><p>15、只有用心，才能看清楚。重要的东西是眼睛看不见的。</p><p>16、要对一个人下定论，不应听其言，而应观其行。</p><p>17、只有用心才能体会的，内在的本质是眼睛看不到的。</p><p>18、如果选择被驯养，那就要承担一点哭泣的风险。</p><p>19、你知道当一个人情绪低落的时候，他会格外喜欢看日落。</p><p>20、忘记朋友是一件令人伤心的事情，并不是人人都有朋友的。</p><p>21、因为你为玫瑰花了那么多时间，它才变得那么重要。</p><p>22、我心爱的花在那里，在那颗遥远的星星上。</p><p>23、对学者而言，星星则是一门待解的难题。</p><p>24、如果你想和别人制造羁绊，就必须承受流泪的风险。</p><p>25、如果你要是驯服了我，我的生活就一定会是欢快的。</p><p>26、眼睛是什么也看不见的，一定要用心去看。</p><p>27、如果我想结识蝴蝶，我得忍受两三只毛毛虫。</p><p>28、在沙漠里有些孤独，在人群里也孤独。</p><p>29、你明白，路太远，我无法带着躯体走，太沉重。</p><p>30、如果想要提高英语，我们就不应该害怕犯错误。</p><p>31、事实是，我以前不知道怎么去看待事物！</p><p>32、忘记一个朋友真令人伤心，并非人人都有过朋友。</p><p>33、对我们懂得生活的人来说，数字都是些无关紧要的事。</p><p>34、忘记朋友是可悲的，并不是每个人都会有一个知心朋友。</p><p>35、规律是从经验而来的，在经验以前，决不可能认识规律。</p><p>36、一个人想要耍点小聪明的时候，就会显得有点不真实。</p><p>37、生命中重要的事情，你不能用眼睛看，只能用心灵看。</p><p>38、花总是表里不一，而我太年轻了，不知道该怎样爱护她。</p><p>39、人经过选择，会满意和喜欢生命的机缘。</p><p>40、要想结识蝴蝶，就得先忍受两三只毛毛虫的叮咬。</p><p>41、把心爱的人放在心里，他便永远活在你的心中。</p><p>42、所有的大人都曾经是小孩，虽然，只有少数人记得。</p><p>43、当一个人情绪低落的时候，他会格外喜欢看日落。</p><p>44、你知道，我的花，我是要对她负责的！</p><p>45、虽然你伤了我的心，但我原谅你的所作所为。</p><p>46、她只有四根微不足道的刺，保护自己，抵抗外敌。</p><p>47、人不应该听花说些什么，只要欣赏她们，闻闻花就够了。</p><p>48、你会爱这满天的星星，所有的星星都会是你的朋友。</p><p>49、夜晚，我喜欢聆听星星，它们就像五亿个小铃铛一样。</p><p>50、每一个人都有自己的星星，但其中的含义却因人而异。</p><p>51、所有的大人都曾经是小孩，虽然，只有少数的人记得。</p><p>52、在你看了四十四次日落那天，你很难过吗？</p><p>53、你知道吗，人在难过的时候就会爱上日落。</p><p>54、如果你想要制造羁绊，就得承受流泪的风险。</p><p>55、她向我释放她的香气，展示她的美艳。</p><p>56、他走过一个又一个星球，却始终放不下对她的思念。</p><p>57、我对你来说，也是你的世界里的唯一了。</p><p>58、当一个人炫耀他自己的智慧时，往往到会误入歧途。</p><p>59、使沙漠显得美丽的，是它在什么地方藏着一口水井。</p><p>60、看，我的那颗星星，恰好就在头上却距离如此遥远！</p><p>61、所有的大人都是孩子，只要你未曾遗忘。</p><p>62、黑夜是富裕的，充满芳香、沉睡的羔羊、尚无颜色的花朵。</p><p>63、当一个人情绪低落时，他会格外喜欢看日落！</p><p>64、想起你，我会很幸福的，你知道我也看着星星啊。</p><p>65、沙漠之所以美丽，是因为在某个角落藏着一口井。</p><p>66、一旦你驯服了什么，就要对她负责，永远的负责。</p><p>67、沙漠之所以美丽，是因为在它的某个角落隐藏着一口井。</p><p>68、你花费了时间，才让你的花费物超所值。</p><p>69、我应该以她的行为，而不是她的言语来判断她的一切。</p><p>70、生活才不是生命荒唐的编号，生活的意义在于生活本身。</p><p>71、本质的东西是用眼睛看不见的，只能用心去看。</p><p>72、当一个人炫耀他自己的智慧时，往往倒会误入歧途。</p><p>73、总有些人不引人注目，却是出色的信使。</p><p>74、即使快要死了，拥有过一个朋友总是好事。</p><p>75、你，只有你，了解这些星星与众不同的含义。</p><p>76、使生活如此美丽的，是我们藏起来的真诚和童心。</p><p>77、我知道在一个星球上，有那么一个红脸的先生。</p><p>78、我的命令是合理的，所以我有权要别人服从。</p><p>79、原来有一天，向日葵也会想主动放弃太阳。</p><p>80、你什么也不要说，语言是误解的源头。</p>]]></content>
     
     
     <summary type="html">《小王子》里的四个人生真谛，能读懂的人，多半有故事</summary>
@@ -80,8 +60,8 @@
   
   <entry>
     <title>如何做好新冠疫情个人防护</title>
-    <link href="http://example.com/2023/01/12/%E7%96%AB%E6%83%85%E9%98%B2%E6%8A%A4/"/>
-    <id>http://example.com/2023/01/12/%E7%96%AB%E6%83%85%E9%98%B2%E6%8A%A4/</id>
+    <link href="http://www.zibbo.xyz/2023/01/12/%E7%96%AB%E6%83%85%E9%98%B2%E6%8A%A4/"/>
+    <id>http://www.zibbo.xyz/2023/01/12/%E7%96%AB%E6%83%85%E9%98%B2%E6%8A%A4/</id>
     <published>2023-01-12T15:02:04.000Z</published>
     <updated>2023-01-12T15:02:40.144Z</updated>
     
@@ -101,43 +81,9 @@
   </entry>
   
   <entry>
-    <title>散文集</title>
-    <link href="http://example.com/2023/01/12/%E6%95%A3%E6%96%87%E9%9B%86/"/>
-    <id>http://example.com/2023/01/12/%E6%95%A3%E6%96%87%E9%9B%86/</id>
-    <published>2023-01-12T14:49:18.000Z</published>
-    <updated>2023-01-12T14:58:42.580Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>秋天的柿子</strong></p><p>　　徐志摩曾说“庭院是一片静，看当头月好”，一种恬静安谧，如春日小溪，在心头潺潺流淌。</p><p>　　早年间，母亲在庭院里栽种的柿子树，如今已枝繁叶茂、亭亭如盖。它斜立在清亮的卤汀河边，筛风弄月，自在妩媚。夏天枝叶遮天蔽日，秋天，青绿的柿子变成了金黄色，霜降时分由橘黄变成通红。满树的红柿子灿烂地微笑着，一盏盏红灯笼照耀着农家小院，秋天被它们渲染得分外妖娆。</p><p>　　每到中秋时节，母亲便摘下半熟的柿子焐得透熟后，以一种秋天的姿势送给四邻亲友，余下的再让家人品尝。母亲总是笑盈盈地看着柿子树，如同凝望自己的儿孙，眼里射出奇异的光彩。</p><p>　　我们欣喜地剥开柿子皮，放在嘴边，轻轻一吸，柿汁就进入口中，满嘴的软甜、绵润、滑滋在舌蕾上绽开；那深藏腹中的软核，光润酥软，嚼起来是美滋滋、滑嫩嫩，味蕾立时陷入鲜美的沼泽中。</p><p>　　秋雨潇潇，满地卷积的红黄柿叶，仿佛是一幅秋天的写意。柿树叶子愈见稀疏，但所剩无几的柿子却更加红艳光鲜，透着质朴而温馨的气息，一如母亲的气息。</p><p>　　“白露打核桃，霜降摘柿子”。有些柿子结在很高的枝头上，倔强地翘首于枝巅，色彩灼灼如火，格外抢眼，如吉祥的灯盏，照亮秋末的寂寞和萧索。刘禹锡《咏红柿子》诗：“晓连星影出，晚带日光悬。本因遗采掇，翻自保天年”把这种情状描绘得惟妙惟肖。</p><p>　　母亲做的柿饼特甜特香。先选色泽金黄、萼尖薄黄的柿子，去掉外围硬皮，保留接近柿子萼盘和果梗的梗皮。然后将去掉外皮的柿果摊放在院子里曝晒，再用手轻轻地捏成扁圆形。霜降前后，将柿饼放在凉爽的地方，使柿饼糖分外溢，其表面出现白霜即成。尝一口，肉肥而甜润。</p><p>　　每当晚霞染红天际的时候，暮色清凉而欢悦。一家人围坐在小院里的桑木桌旁，剥食着鲜嫩的菱角和芡实，品尝着母亲做的柿子饼，整个院子，氤氲着柿子淡淡的香味儿。小院的秋夜格外静美，那密密的柿叶滤着月光映在地上，是清简的素描。小院里的那份亲切、那份温馨，静静地弥漫开来，笛声一样悠远。</p><p>　　而今妻子擅做软炸柿子。将柿子去皮，捣碎成柿子果酱。然后加入面粉混合均匀，搅拌成橙黄色湿性面团。将枣泥、果仁、黑芝麻粉混合，作为馅料。最后将馅料包入面团中压扁，放到油锅里炸成金黄色即可。我们吃得齿颊生香，不忍卒筷。</p><p>　　柿子，色艳味美，博得了历代文人雅士的厚爱：唐代白居易有“柿树绿阴合，王家庭院宽”之赞叹；唐代李益留下“柿叶翻红霜景秋，碧天如水倚红楼”的佳句；清代查慎行钟情柿子饼：“齿疏宜软美，喉润觉清空”。</p><p>　　国画大师齐白石喜画柿子，因其与事、世、市等字谐音，寓意吉祥。柿子以没骨画出，叶筋和枝杈勾勒较淡，凸显叶片中的柿子。画作构图饱满，色彩热烈，显示出一种喜庆、乐观的情绪。</p><p>　　柿子红艳在庸常的平民生活里，姿态温婉清美，在月光小院里，在清浅时光里，恣意安然，自在妖娆。如一盏盏红灯笼，灵动了恬淡而喧嚣的日子。让我们的乡秋汩汩流淌，让我们重拾遗落在岁月深处的诗性和唯美、淳朴和恬淡。</p><p><img src="https://img.ddnx.com/allimg/2108/611c58380c47887261.png" alt="1629216048611bdd30aea22221474.png"></p>]]></content>
-    
-    
-    <summary type="html">形散神聚、意境深邃、语言优美。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>一个伟大的计划</title>
-    <link href="http://example.com/2023/01/12/%E4%B8%80%E4%B8%AA%E4%BC%9F%E5%A4%A7%E7%9A%84%E8%AE%A1%E5%88%92/"/>
-    <id>http://example.com/2023/01/12/%E4%B8%80%E4%B8%AA%E4%BC%9F%E5%A4%A7%E7%9A%84%E8%AE%A1%E5%88%92/</id>
-    <published>2023-01-12T14:40:31.000Z</published>
-    <updated>2023-01-12T15:00:27.328Z</updated>
-    
-    <content type="html"><![CDATA[<p>出南洋记</p><p>hù dōng bā jiǔ yuè, kè zi yì qín chuān.</p><p>沪东八九月，客子忆秦川。</p><p>fāng cái liú qiān gǔ, shèng jì biàn luán shān.</p><p>芳才留千古，胜迹遍峦山。</p><p>sì hǎi bēn téng huì huá xià, jiǔ zhōu tóng hǎo gòng hé huān.</p><p>四海奔腾汇华夏，九州同好共合欢。</p><p>guān wài cháng biān zhèng fēi xuě, sài běi fēng róng xìng wú yān.</p><p>关外长边正飞雪，塞北烽戎幸无烟。</p><p>dì wáng jiàng xiàng bù lián kǔ, bēi chóu bié lí jìn rén jiān.</p><p>帝王将相不怜苦，悲愁别离尽人间。</p><p>cùn xīn cè yǐn cún rén yì, nài hé wú yào wú líng dān.</p><p>寸心恻隐存仁义，奈何无药无灵丹。</p><p>shí lǐ yī zǒu mǎ, wǔ lǐ yī yáng biān.</p><p>十里一走马，五里一扬鞭。</p><p>fú xiù nán yáng qù, dà dào rú qīng tiān.</p><p>拂袖南洋去，大道如青天。</p><p>qiū shí yè luò guī gù lǐ, zài yǐn wàn jiā quán shuǐ hān.</p><p>秋时叶落归故里，再饮万家泉水酣。</p><p>中文诗体之美，在于其无可替代的高熵信息量，在于无需编码的形意想象，中文带给我巨大的安全感，我希望能尝试带着它周游人类的每一寸土地，用它的想象描绘世间的一切喜乐无常。</p><p>驭文为舟，承思以航，写意余生，不负梦一场。</p>]]></content>
-    
-    
-    <summary type="html">白话词穷，作首诗吧。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>《项塔兰》为何如此令人震撼</title>
-    <link href="http://example.com/2023/01/12/%E9%A1%B9%E5%A1%94%E5%85%B0/"/>
-    <id>http://example.com/2023/01/12/%E9%A1%B9%E5%A1%94%E5%85%B0/</id>
+    <link href="http://www.zibbo.xyz/2023/01/12/%E9%A1%B9%E5%A1%94%E5%85%B0/"/>
+    <id>http://www.zibbo.xyz/2023/01/12/%E9%A1%B9%E5%A1%94%E5%85%B0/</id>
     <published>2023-01-11T16:00:00.000Z</published>
     <updated>2023-01-13T08:16:46.017Z</updated>
     
@@ -149,14 +95,14 @@
     
     
     
-    <category term="小说，读书笔记" scheme="http://example.com/tags/%E5%B0%8F%E8%AF%B4%EF%BC%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <category term="小说，读书笔记" scheme="http://www.zibbo.xyz/tags/%E5%B0%8F%E8%AF%B4%EF%BC%8C%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>浅谈《围城》</title>
-    <link href="http://example.com/2023/01/11/%E5%9B%B4%E5%9F%8E/"/>
-    <id>http://example.com/2023/01/11/%E5%9B%B4%E5%9F%8E/</id>
+    <link href="http://www.zibbo.xyz/2023/01/11/%E5%9B%B4%E5%9F%8E/"/>
+    <id>http://www.zibbo.xyz/2023/01/11/%E5%9B%B4%E5%9F%8E/</id>
     <published>2023-01-11T04:05:23.000Z</published>
     <updated>2023-01-12T14:14:54.887Z</updated>
     
@@ -172,38 +118,67 @@
   
   <entry>
     <title>如果生活让人觉得焦躁，那一定是哪里出问题了</title>
-    <link href="http://example.com/2022/09/12/00/"/>
-    <id>http://example.com/2022/09/12/00/</id>
+    <link href="http://www.zibbo.xyz/2022/09/12/00/"/>
+    <id>http://www.zibbo.xyz/2022/09/12/00/</id>
     <published>2022-09-12T07:11:01.000Z</published>
-    <updated>2023-01-13T07:13:25.782Z</updated>
+    <updated>2023-01-14T13:10:28.965Z</updated>
     
-    <content type="html"><![CDATA[<p>昨天写了《瓦尔登湖》，里面有一个段落没讲到。</p><p>是说梭罗在湖边居住的时候，有一个砍柴人。</p><p>这人是附近村上的，每天的工作就是砍树。</p><p>每天砍树，这听起来就不是啥美差。</p><p>但这人对自己砍柴这个事情非常的沉浸。</p><p>觉得在森林里砍树是全世界最快乐的事情。</p><p>以至于梭罗每次看到他他都是乐呵呵的。</p><p>刚好今天看到的一篇文章里，提到了一个心理学的概念，叫“自体感”。</p><p>这个词倒是挺新鲜的，但是概念一直都有。</p><p>就是个人对自我的认知。</p><p>现代人，好像必须要很努力才行。</p><p>这种努力，放在现实里就是各种知识付费。</p><p>从前是报班学英文，考各种证。</p><p>现在是各种付费群，知识星球，在线课程。</p><p>彷佛生命里那一点点可怜的休息时间都必须得占满才行。</p><p>和这种狂野的上进相比，躺平不见得是什么坏事。</p><p>这种上进极其消耗生命的能量。</p><p>因为越是上进，就越是不满意自己的状态。</p><p>各种状态，生活状态也不对，心态也不对。</p><p>然后就是拼命的想要调试到一个符合自己预期的状态。</p><p>以前我就写过一句话，叫改变都是极其缓慢而难以感知的。</p><p>这和我们回头一看，几年十几年一下子就过了，那岁月叫一个蹉跎。</p><p>其实是同样的道理。</p><p>根本没有什么恒定的时间，一切都是主观的体验。</p><p>只不过，越是游离于当下之外，这种蹉跎感越强。</p><p>因为什么都没留下。</p><p>人总是会有点追求，有了追求达不到这很难受。</p><p>这容易让人产生负面评价。</p><p>现在的社会，追求太单一了，而搞钱这个事情，机缘巧合极强。</p><p>也就是说大部分人可能都达不到自己的追求。</p><p>然后，就会觉得自己是不是哪里不够努力？</p><p>然后会有很多努力的选项提供给你，最后的状态就是，努力本身成了一种负担。</p><p>而一旦如此，努力就变得功利。</p><p>做了要有个结果，起码也要把卡打满。</p><p>不然就觉得自己非常不在状态。</p><p>有个人说的一句话很有意思“没有被爱照亮过的生命，存在本身就是一种羞愧”。</p><p>这话有两层含义。</p><p>一是人要有人爱才行，二是如果没被爱过就容易理不清自己的存在。</p><p>这其实是低水平的自体感。</p><p>因为对自我的认知来源于她人的映射。</p><p>不过这是一种很好的调整状态的方式，因为亲密关系是极其容易建立意义感的。</p><p>而高级的自体感在于，我知道自己很好。</p><p>我自己做的事走在不一定正确，但肯定合理的轨迹上。</p><p>知道什么事情是重要的，知道努力或改变不一定有结果，反正顺势而为。</p><p>不说“尽人事听天命”，但至少不会自怨自艾。</p><p>这种自体感不依赖于外物，就算有外界的眼光去批判，也不会因此而焦躁。</p><p>更不至于自我批判到无所适从。</p><p>就有点类似于梭罗所写的，每个圆心到圆周都可以画出无数条半径。</p><p>人大可以选择其一，或者改变，或者坚守。</p><p>或者坚守后改变。</p><p>把有限的人生，每花一秒在焦躁上面，都是浪费。</p>]]></content>
+    <content type="html"><![CDATA[<p>人总是会有点追求，有了追求达不到这很难受。</p><p>这容易让人产生负面评价。</p><p>现在的社会，追求太单一了，而搞钱这个事情，机缘巧合极强。</p><p>也就是说大部分人可能都达不到自己的追求。</p><p>然后，就会觉得自己是不是哪里不够努力？</p><p>然后会有很多努力的选项提供给你，最后的状态就是，努力本身成了一种负担。</p><p>而一旦如此，努力就变得功利。</p><p>做了要有个结果，起码也要把卡打满。</p><p>不然就觉得自己非常不在状态。</p><p>有个人说的一句话很有意思“没有被爱照亮过的生命，存在本身就是一种羞愧”。</p><p>这话有两层含义。</p><p>一是人要有人爱才行，二是如果没被爱过就容易理不清自己的存在。</p><p>这其实是低水平的自体感。</p><p>因为对自我的认知来源于她人的映射。</p><p>不过这是一种很好的调整状态的方式，因为亲密关系是极其容易建立意义感的。</p><p>而高级的自体感在于，我知道自己很好。</p><p>我自己做的事走在不一定正确，但肯定合理的轨迹上。</p><p>知道什么事情是重要的，知道努力或改变不一定有结果，反正顺势而为。</p><p>不说“尽人事听天命”，但至少不会自怨自艾。</p><p>这种自体感不依赖于外物，就算有外界的眼光去批判，也不会因此而焦躁。</p><p>更不至于自我批判到无所适从。</p><p>就有点类似于梭罗所写的，每个圆心到圆周都可以画出无数条半径。</p><p>人大可以选择其一，或者改变，或者坚守。</p><p>或者坚守后改变。</p><p>把有限的人生，每花一秒在焦躁上面，都是浪费。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;昨天写了《瓦尔登湖》，里面有一个段落没讲到。&lt;/p&gt;
-&lt;p&gt;是说梭罗在湖边居住的时候，有一个砍柴人。&lt;/p&gt;
-&lt;p&gt;这人是附近村上的，每天的工作就是砍树。&lt;/p&gt;
-&lt;p&gt;每天砍树，这听起来就不是啥美差。&lt;/p&gt;
-&lt;p&gt;但这人对自己砍柴这个事情非常的沉浸。&lt;/p&gt;
-&lt;p&gt;觉得</summary>
+    <summary type="html">&lt;p&gt;人总是会有点追求，有了追求达不到这很难受。&lt;/p&gt;
+&lt;p&gt;这容易让人产生负面评价。&lt;/p&gt;
+&lt;p&gt;现在的社会，追求太单一了，而搞钱这个事情，机缘巧合极强。&lt;/p&gt;
+&lt;p&gt;也就是说大部分人可能都达不到自己的追求。&lt;/p&gt;
+&lt;p&gt;然后，就会觉得自己是不是哪里不够努力？&lt;/p&gt;
+</summary>
       
     
     
     
     
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="http://www.zibbo.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="哈哈哈" scheme="http://www.zibbo.xyz/tags/%E5%93%88%E5%93%88%E5%93%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>和过去挥挥手</title>
+    <link href="http://www.zibbo.xyz/2022/08/14/05/"/>
+    <id>http://www.zibbo.xyz/2022/08/14/05/</id>
+    <published>2022-08-14T12:18:49.000Z</published>
+    <updated>2023-01-14T13:00:29.830Z</updated>
+    
+    <content type="html"><![CDATA[<p>​                   工作很长一段时间我都比较怀念大学的生活，大部分时间满脑子都是大学美好的时光。有时深夜睡不着的时候会幻想时空穿越，回到上大学的时候。一定要逃一门课，一定要好好的谈一场恋爱，一定要加倍努力然后学别人考个研。记得小学有一篇话题作文叫“假如我XXXX”，以前写都是迫于老师的淫威，写假如我是医生救死扶伤、假如我是老师教书育人等等。如今我只想写假如我能回到过去，好好体会在校的每一天时光。想一起喝室友逃课去操场打排球，想学习拍照，想把学校附近的美食挨个吃一遍，想做以前没做过的事情。今天就做做梦，假设自己回到了过去。早上我起得很早，第一次因为起的早，在食堂吃到了可口的早餐，排队买了姜汁可乐，在教室占到舒适的座位，跟同学聊聊八卦。三四节课是Ps课自己不是那么感兴趣，果断和室友逃课去了排球场。中午提前到了餐厅，发现餐厅基本没什么学生，不用排很长的队就可以打饭。午休爱打游戏的室友今天和女朋友闹掰了，一中午都不在宿舍，这下可以睡个好觉了。下午是思修大课，提前去教室给室友占了三个座位，看着思修老教授边讲课边跳舞，不知不觉已经过了两个小时。四点15下课离睡觉还有好长一段时间况且今天是周五，我带着一群朋友骑上了自己心爱的小布到了瑞德摩尔，吃过了椒麻鸡，去东方红影视城看了《海王》。晚上回到学校去浴室舒舒服服的洗了个澡，拿起我的kindle看完了《三体》，这时室友打电话说女朋友闹分手心情不好要出去喝一杯。来到学校附近的清吧，点了一箱真的雪花，这次我喝了六瓶还保持着清醒，给室友念叨着下一个更好下一个更乖。半夜我拖着烂醉的室友回到了寝室，帮他脱了衣服顺便给他点了一只兰州。困意袭来，我一觉天亮。</p><p>​             写了这么多流水账我知道没有假如这么一说，以前的时光就应该随它消散。再多的回忆也无法挽留，工作之后大家各奔东西，以前要好的交情也随着时间慢慢变了味。拥有保质期的东西，就应该在保期间尽情的享用。我没有时光机器，所以有些遗憾注定是无法弥补。所以挥一挥衣袖，不带走一片云彩，这次我静悄悄的走。</p><p><strong>–the end</strong> </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​                   工作很长一段时间我都比较怀念大学的生活，大部分时间满脑子都是大学美好的时光。有时深夜睡不着的时候会幻想时空穿越，回到上大学的时候。一定要逃一门课，一定要好好的谈一场恋爱，一定要加倍努力然后学别人考个研。记得小学有一篇话题作文叫“假如我</summary>
+      
+    
+    
+    
     
   </entry>
   
   <entry>
     <title>心要野</title>
-    <link href="http://example.com/2022/08/13/03/"/>
-    <id>http://example.com/2022/08/13/03/</id>
+    <link href="http://www.zibbo.xyz/2022/08/13/03/"/>
+    <id>http://www.zibbo.xyz/2022/08/13/03/</id>
     <published>2022-08-13T07:42:47.000Z</published>
-    <updated>2023-01-13T08:09:01.659Z</updated>
+    <updated>2023-01-14T13:17:59.138Z</updated>
     
+    <content type="html"><![CDATA[<iframe src="//player.bilibili.com/player.html?aid=431958858&bvid=BV1gG411j79e&cid=870779057&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=498 width=510> </iframe><p>做自己想做的事。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=431958858&amp;bvid=BV1gG411j79e&amp;cid=870779057&amp;page=1&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;</summary>
+      
     
     
     
@@ -212,8 +187,8 @@
   
   <entry>
     <title>无所事事的自己</title>
-    <link href="http://example.com/2021/01/13/01/"/>
-    <id>http://example.com/2021/01/13/01/</id>
+    <link href="http://www.zibbo.xyz/2021/01/13/01/"/>
+    <id>http://www.zibbo.xyz/2021/01/13/01/</id>
     <published>2021-01-13T07:41:20.000Z</published>
     <updated>2023-01-13T08:04:36.125Z</updated>
     
@@ -229,19 +204,15 @@
   
   <entry>
     <title>过自己想要的生活</title>
-    <link href="http://example.com/2020/08/30/04/"/>
-    <id>http://example.com/2020/08/30/04/</id>
+    <link href="http://www.zibbo.xyz/2020/08/30/04/"/>
+    <id>http://www.zibbo.xyz/2020/08/30/04/</id>
     <published>2020-08-30T07:43:53.000Z</published>
-    <updated>2023-01-13T08:11:31.068Z</updated>
+    <updated>2023-01-14T09:13:05.105Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>人生只有一次，过自己想要的生活，这比什么都重要，也才是人生最高级的智慧。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>每个人都有权力过自己想要的生活，喜欢想喜欢的人，做自己想做的事，不辜负自己也不辜负别人。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=33367876&auto=1&height=66"></iframe>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;人生只有一次，过自己想要的生活，这比什么都重要，也才是人生最高级的智慧。&lt;/strong&gt;&lt;/p&gt;
-</summary>
-      
+    <summary type="html">人生只有一次，过自己想要的生活，这比什么都重要，也才是人生最高级的智慧。</summary>
     
     
     
