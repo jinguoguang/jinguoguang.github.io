@@ -1033,6 +1033,7 @@ p {
 }
 
 footer.footer-page {
+    font-size: 12px;
     height: 50px;
     padding: 20px;
     display: flex;
