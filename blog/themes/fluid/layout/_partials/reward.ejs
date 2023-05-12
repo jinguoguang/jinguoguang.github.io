@@ -6,6 +6,7 @@
       <% for(const item of theme.reward.pay_links) { %>
       <div style="margin: 10px">
         <img src="<%= url_for(item.link) %>" alt="<%= item.type %>" class="<%= item.index === 0 ?'wechat' : 'zhifubao'%>" />
+        <p><%= item.index === 0 ?'微信' : '支付宝'%></p>
       </div>
       <% } %>
     </div>
