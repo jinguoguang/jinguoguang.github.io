@@ -430,7 +430,6 @@ footer:
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
   '
-
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
   statistics:
@@ -450,11 +449,13 @@ footer:
     # 公安备案号，不填则只显示ICP
     police_text: 
     # 公安备案的编号，用于URL跳转查询
-    # ``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````police_code: 12345678
+    # police_code: 12345678
     # 公安备案的图片. 为空时不显示备案图片
     police_icon: /img/police_beian.png
 
-
+running_time:
+  enable: scroll_after_turning_page
+  create_time: '2020/08/30 09:00:00'
 #---------------------------
 # 首页
 # Home Page
