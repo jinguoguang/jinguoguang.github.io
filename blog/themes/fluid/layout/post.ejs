@@ -47,6 +47,9 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.post.banner_mask_alpha
                 <%- inject_point('postMarkdownEnd') %>
               </div>
             <% } %>
+            <% if(theme.reward.enable) { %>
+              <%- partial('_partials/reward.ejs') %>
+            <% } %>            
             <hr/>
             <div>
               <%- inject_point('postMetaBottom') %>

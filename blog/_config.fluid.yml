@@ -238,6 +238,7 @@ custom_js: /js/mouse.js
 custom_css: 
   - /css/mac.css
   - /css/font.css
+  - /css/hover-min.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -644,6 +645,14 @@ post:
     # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
     # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
     collapseDepth: 0
+#打赏
+reward:
+  enable: true
+  title: 赏
+  message: 我这么可爱，请给我钱 o(*^ω^*)o
+  pay_links:
+    - { index : 0,type: 微信, link: /img/default.png}
+    - { index : 1,type: 支付宝, link: /img/default.png }
 
   # 版权声明，会显示在每篇文章的结尾
   # Copyright, will be displayed at the end of each post

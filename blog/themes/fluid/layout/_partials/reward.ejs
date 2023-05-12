@@ -1,0 +1,25 @@
+<div class="reward-container">
+    <% if(theme.reward.pay_links) { %>
+    <span class="reward-button hvr-buzz-out"><%=theme.reward.title%></span>
+    <div><%=theme.reward.message%></div>
+    <div class="reward-pay">
+      <% for(const item of theme.reward.pay_links) { %>
+      <div style="margin: 10px">
+        <img src="<%= url_for(item.link) %>" alt="<%= item.type %>" class="<%= item.index === 0 ?'wechat' : 'zhifubao'%>" />
+      </div>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
+  
+  <script>
+    const rewardButtonDom = document.getElementsByClassName('reward-button')[0]
+    const rewardPayDom = document.getElementsByClassName('reward-pay')[0]
+    rewardButtonDom.addEventListener('mouseenter', function ()  {
+      rewardPayDom.style.display = 'flex'
+    })
+    rewardButtonDom.addEventListener('mouseleave', function ()  {
+      rewardPayDom.style.display = 'none'
+    })
+  </script>
+  
