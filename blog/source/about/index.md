@@ -2,7 +2,6 @@
 title: about
 layout: about
 date: 2021-02-01 13:45:34
-banner_img: https://pan.zealsay.com/zealsay/cover/1.jpg
 ---
 
 <style>
@@ -52,9 +51,6 @@ Hexo 框架 + [Fluid](https://github.com/fluid-dev/hexo-theme-fluid) 主题
 
 <center>
 
-![](https://5b0988e595225.cdn.sohucs.com/images/20190801/04b0958052a441ab8be28df71c650f64.gif)
-
-</center>
 
 
 
