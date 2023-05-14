@@ -732,7 +732,7 @@ comments:
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
-    type: disqus
+    type: utterances
 #打赏
 reward:
   enable: true
@@ -755,7 +755,7 @@ reward:
 # Based on GitHub Issues
 # See: https://utteranc.es
 utterances:
-  repo:
+  repo: jinguoguang/comment-blog
   issue_term: pathname
   label: utterances
   theme: github-light
