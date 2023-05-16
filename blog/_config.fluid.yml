@@ -737,7 +737,7 @@ comments:
 reward:
   enable: true
   title: 赏
-  message: 我这么可爱，请给我钱 o(*^ω^*)o
+  message: 您的鼓励，是我最大的动力
   pay_links:
     - { index : 0,type: 微信, link: /img/wechat.jpg}
     - { index : 1,type: 支付宝, link: /img/zhifubao.jpg}
