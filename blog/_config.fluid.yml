@@ -803,7 +803,7 @@ valine:
   appId: 7oE653yNltVkmniTXN57Ko6V-gzGzoHsz
   appKey: bBq8ktn73l0qlxf3BsmGePpg
   path: window.location.pathname #当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
-  placeholder:
+  placeholder: '留下你的脚印，在我的世界里'
   avatar: 'retro'
   meta: ['nick', 'mail', 'link']
   requiredFields: []
