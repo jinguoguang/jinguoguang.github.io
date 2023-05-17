@@ -229,6 +229,8 @@ font:
   letter_spacing: 0.02em
   code_font_size: 85%
 
+# 自定义 <head> 节点中的 HTML 内容
+custom_head: '<meta name="baidu-site-verification" content="codeva-OJCLMIKcAp" />'
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js: /js/mouse.js
@@ -804,7 +806,7 @@ valine:
   appKey: bBq8ktn73l0qlxf3BsmGePpg
   path: window.location.pathname #当前文章页路径，用于区分不同的文章页，以保证正确读取该文章页下的评论列表
   placeholder: '留下你的脚印，在我的世界里'
-  avatar: 'retro'
+  avatar: 'mp'
   meta: ['nick', 'mail', 'link']
   requiredFields: []
   pageSize: 10
