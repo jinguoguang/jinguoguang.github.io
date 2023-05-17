@@ -72,3 +72,43 @@ p {
     display: none;
   }
 }
+/* 分类页字体修改 */
+.categories #board .category-post-list .list-group-item {
+  font-size: 1.1rem;
+}
+
+.categories #board .category-item,
+.categories #board .category-subitem {
+  font-size: 1.5rem;
+}
+
+.categories .category-count {
+  font-size: 1rem;
+}
+
+/* 手机端字体修改 */
+@media (max-width:424px) {
+
+  .categories #board .category-post-list .list-group-item {
+      font-size: 1rem;
+  }
+
+  .categories #board .category-item,
+  .categories #board .category-subitem {
+      font-size: 1.3rem;
+  }
+
+  .categories .category-count {
+      font-size: 0.9rem;
+  }
+}
+
+
+/*设置图片居中*/
+img.img-center {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+
