@@ -16,7 +16,7 @@ abbrlink: 824ac3d0
 
 
 
-1.统计符合条件的元素个数
+1.筛选出符合条件的元素
 
 #### 使用stream流筛选出List集合中符合条件的实体对象
 
@@ -71,3 +71,7 @@ Stream的操作可以分为两大类：中间操作、终结操作
 Stream结合具体操作，大致可分为如下图所示：
 
 ![img](https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l5MzM5NDUyNjg5,size_16,color_FFFFFF,t_70.png)
+
+# 参考
+
+[1]https://blog.csdn.net/yy339452689/article/details/110956119
