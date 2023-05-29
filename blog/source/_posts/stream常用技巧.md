@@ -1,17 +1,14 @@
 ---
 title: Stream常用技巧
-date:
-  '[object Object]': null
 excerpt: 摘要
 tags:
-  - Hexo
-  - Fluid
+  - Java
+  - Stream
 categories:
-  - Diary
-  - Life
-index_img: /img/example.jpg
-banner_img: /img/index.jpg
-abbrlink: 824ac3d0
+  - 教程
+index_img: >-
+  https://img2.baidu.com/it/u=2005414671,3555880494&fm=253&fmt=auto&app=138&f=JPEG?w=450&h=250
+abbrlink: ccf67fbd
 ---
 
 

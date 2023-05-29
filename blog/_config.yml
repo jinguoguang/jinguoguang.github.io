@@ -110,6 +110,13 @@ deploy:
   repo: https://github.com/jinguoguang/jinguoguang.github.io.git 
   branch: master
   message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }}  
+# deploy:
+#   - type: git
+#     repository: git@github.com:yunfeidog/yunfeidog.github.io.git
+#     branch: main
+#   - type: git
+#     repository: git@gitee.com:dogyunfei/dogyunfei.git
+#     branch: master
 
 # 订阅 RSS
 feed:
