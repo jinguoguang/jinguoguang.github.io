@@ -11,15 +11,25 @@ index_img: >-
 abbrlink: ccf67fbd
 ---
 
+# 一、查询方法
 
-
-1.筛选出符合条件的元素
-
-#### 使用stream流筛选出List集合中符合条件的实体对象
-
-注意：使用findFirst()方法返回的是符合条件的第一个元素，使用findAny()方法在多线程并发访问下是符合条件的任意元素
+## 1.1 forEach()
 
 示例:
+
+```java
+
+```
+
+输出：
+
+```java
+
+```
+
+## 1.2 filter(T -> boolean)
+
+示例:获取用户为“a”的用户列表。
 
 ```java
 public static void main(String[] args) {
@@ -33,7 +43,9 @@ public static void main(String[] args) {
         list.forEach(System.out::println);
         System.out.println("------------");
         //筛选出符合条件的数据
-        UserInfo userInfo = list.stream().filter(s -> s.getUserName().equals("a")).findFirst().orElse(null);
+        UserInfo userInfo = list.stream().filter(
+          s -> s.getUserName().equals("a"))
+          .collect(Collectors.toList());
         System.out.println(userInfo);
     }
 ```
@@ -50,9 +62,58 @@ UserInfo{userName='a', age='11'}
 进程已结束,退出代码0
 ```
 
+## 1.3 findAny() 和 findFirst()
+
+注意：findFirst() 和 findAny() 都是获取列表中的第一条数据，但是findAny()操作，返回的元素是不确定的，对于同一个列表多次调用findAny()有可能会返回不同的值。使用findAny()是为了更高效的性能。如果是数据较少，串行地情况下，一般会返回第一个结果，如果是并行（parallelStream并行流）的情况，那就不能确保是第一个。
+
+例如：使用parallelStream并行流，findAny() 返回的就不一定是第一条数据。
+
+```java
+//parallelStream方法能生成并行流，使用findAny返回的不一定是第一条数据
+User user = userList.parallelStream().filter(
+  u -> u.getName().startsWith("king"))
+  .findAny().orElse(null);
+```
+
+## 1.4 map(T -> R) 和 flatMap(T -> Stream)
+
+使用 map() 将流中的每一个元素 T 映射为 R（类似类型转换）。
+
+使用 flatMap() 将流中的每一个元素 T 映射为一个流，再把每一个流连接成为一个流。
+
+示例:使用 map() 方法获取用户列表中的名称列。
+
+```java
+
+```
+
+## 1.5 distinct()
+
+使用 distinct() 方法可以去除重复的数据。
+
+## 1.6 limit(long n) 和 skip(long n)
+
+limit(long n) 方法用于返回前n条数据，skip(long n) 方法用于跳过前n条数据。
 
 
 
+# 二、判断方法
+
+## 2.1 anyMatch(T -> boolean)
+
+使用 anyMatch(T -> boolean) 判断流中是否有一个元素匹配给定的 T -> boolean 条件。
+
+## 2.2 allMatch(T -> boolean)
+
+使用 allMatch(T -> boolean) 判断流中是否所有元素都匹配给定的 T -> boolean 条件。
+
+# 三、统计方法
+
+
+
+# 四、排序方法
+
+# 五、分组方法
 
 Stream操作分类
 Stream的操作可以分为两大类：中间操作、终结操作
@@ -71,4 +132,6 @@ Stream结合具体操作，大致可分为如下图所示：
 
 # 参考
 
-[1]https://blog.csdn.net/yy339452689/article/details/110956119
+【1】https://blog.csdn.net/yy339452689/article/details/110956119
+
+【2】http://t.csdn.cn/TUoiB

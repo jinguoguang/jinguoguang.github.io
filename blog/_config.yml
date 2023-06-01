@@ -13,7 +13,8 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://www.zibbo.xyz
+url:  https://yabar.gitee.io
+root: /
 permalink: king/:abbrlink.html  # 此处可以自己设置，也可以直接使用 :/abbrlink
 abbrlink:
     alg: crc32   #算法： crc16(default) and crc32
@@ -105,18 +106,20 @@ theme: fluid  # 指定主题
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/jinguoguang/jinguoguang.github.io.git 
-  branch: master
-  message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }}  
 # deploy:
-#   - type: git
-#     repository: git@github.com:yunfeidog/yunfeidog.github.io.git
-#     branch: main
-#   - type: git
-#     repository: git@gitee.com:dogyunfei/dogyunfei.git
-#     branch: master
+#   type: git
+#   repo: https://github.com/jinguoguang/jinguoguang.github.io.git 
+#   branch: master
+#   message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }}  
+deploy:
+  - type: git
+    repository: https://github.com/jinguoguang/jinguoguang.github.io.git 
+    branch: master
+    message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
+  - type: git
+    repository: git@gitee.com:yabar/yabar.git
+    branch: master
+    message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
 
 # 订阅 RSS
 feed:
