@@ -109,11 +109,95 @@ limit(long n) 方法用于返回前n条数据，skip(long n) 方法用于跳过�
 
 # 三、统计方法
 
+## 3.1 reduce((T, T) -> T) 和 reduce(T, (T, T) -> T)
 
+使用 reduce((T, T) -> T) 和 reduce(T, (T, T) -> T) 用于组合流中的元素，如求和，求积，求最大值等。
+
+## 3.2 mapToInt(T -> int) 、mapToDouble(T -> double) 、mapToLong(T -> long) 
+
+int sumVal = userList.stream().map(User::getAge).reduce(0,Integer::sum)；计算元素总和的方法其中暗含了装箱成本，map(User::getAge) 方法过后流变成了 Stream 类型，而每个 Integer 都要拆箱成一个原始类型再进行 sum 方法求和，这样大大影响了效率。针对这个问题 Java 8 有良心地引入了数值流 IntStream, DoubleStream, LongStream，这种流中的元素都是原始数据类型，分别是 int，double，long。3.3 counting() 和 count()
+
+## 3.3 counting() 和 count()
+
+ 使用 counting() 和 count() 可以对列表数据进行统计。
+
+## 3.4 summingInt()、summingLong()、summingDouble()
+
+用于计算总和，需要一个函数参数。
+
+## 3.5 averagingInt()、averagingLong()、averagingDouble()
+
+用于计算平均值。
+
+## 3.6 summarizingInt()、summarizingLong()、summarizingDouble()
+
+这三个方法比较特殊，比如 summarizingInt 会返回 IntSummaryStatistics 类型。
+
+## 3.7 BigDecimal类型的统计
+
+对于资金相关的字段，通常会使用BigDecimal数据类型。
 
 # 四、排序方法
 
+## 4.1 sorted() / sorted((T, T) -> int)
+
+如果流中的元素的类实现了 Comparable 接口，即有自己的排序规则，那么可以直接调用 sorted() 方法对元素进行排序，如 Stream。反之, 需要调用 sorted((T, T) -> int) 实现 Comparator 接口。
+
 # 五、分组方法
+
+## 5.1 groupingBy
+
+使用 groupingBy() 将数据进行分组，最终返回一个 Map 类型。
+
+## 5.2 多级分组
+
+groupingBy 可以接受一个第二参数实现多级分组。
+
+## 5.3 分组汇总
+
+
+
+# 六、示例
+
+```
+import java.util.Random;
+import org.json.JSONObject;
+
+public class RandomJson {
+
+    // 部门列表
+    private static final String[] DEPARTMENT_LIST = { "研发部", "市场部", "人事部", "客服部" };
+    private static final Random RANDOM = new Random();
+
+    // 生成随机 JSON 数据
+    public static JSONObject generateRandomJson() {
+        JSONObject userData = new JSONObject();
+        int userId = RANDOM.nextInt(90000) + 10000;
+        String name = "user" + userId;
+        String gender = RANDOM.nextBoolean() ? "男" : "女";
+        int age = RANDOM.nextInt(43) + 18;
+        String department = DEPARTMENT_LIST[RANDOM.nextInt(DEPARTMENT_LIST.length)];
+        double salary = RANDOM.nextDouble() * (30000 - 8000) + 8000;
+        userData.put("user_id", userId);
+        userData.put("name", name);
+        userData.put("gender", gender);
+        userData.put("age", age);
+        userData.put("department", department);
+        userData.put("salary", salary);
+        return userData;
+    }
+
+    // 测试代码
+    public static void main(String[] args) {
+        JSONObject userJson = generateRandomJson();
+        System.out.println(userJson.toString());
+    }
+}
+```
+
+
+
+
 
 Stream操作分类
 Stream的操作可以分为两大类：中间操作、终结操作

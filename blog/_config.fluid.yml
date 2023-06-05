@@ -466,7 +466,7 @@ running_time:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner i看以？“%%%%……mage, can be a relative path or an absolute path, the same on other pages
-  banner_img: https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/daniel-newman-nQDK6U9PNtU-unsplash.jpg
+  banner_img: https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/202306052024395.jpg
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
