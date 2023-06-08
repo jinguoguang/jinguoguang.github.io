@@ -123,6 +123,16 @@ idea汉化插件
 
 ![image-20230518135759195](https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/image-20230518135759195.png)
 
+
+
+# 使用技巧
+
+![image-20230608090544352](https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/202306080905064.png)
+
+
+
+![image-20230608090823228](https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/202306080908286.png)
+
 # 参考
 
 [1] https://mp.weixin.qq.com/s/UykEJ42d1rf0K5KXMJjwBA
