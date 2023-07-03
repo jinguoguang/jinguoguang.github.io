@@ -116,10 +116,10 @@ deploy:
     repository: https://github.com/jinguoguang/jinguoguang.github.io.git 
     branch: master
     message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
-  - type: git
-    repository: git@gitee.com:yabar/yabar.git
-    branch: master
-    message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
+  # - type: git
+  #   repository: git@gitee.com:yabar/yabar.git
+  #   branch: master
+  #   message: Site updated at {{ now("YYYY-MM-DD HH:mm:ss") }} 
 
 # 订阅 RSS
 feed:
