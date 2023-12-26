@@ -960,7 +960,7 @@ about:
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/f395ad5f64577c71686ab686e91fcbe2.jpeg
-  name: "一屋橘子香"
+  name: "秋刀鱼"
   intro: "前端表演技术家 / 后端CV战士 /  摸鱼小能手 /单车爱好者"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
@@ -1036,7 +1036,7 @@ links:
   # Custom content at the bottom of the links
   custom:
     enable: true
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：一屋橘子香</li><li>简介：一种关系都会束缚自己当然最主要的还是知音难觅</li><li>链接：https://www.zibbo.xyz</li><li>图片：http://localhost:4000/img/avatar.jpg</li></ul>'
+    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：秋刀鱼</li><li>简介：一种关系都会束缚自己当然最主要的还是知音难觅</li><li>链接：https://www.zibbo.xyz</li><li>头像：http://www.zibbo.xyz/img/avatar.jpg</li></ul>'
 
   # 评论插件
   # Comment plugin
