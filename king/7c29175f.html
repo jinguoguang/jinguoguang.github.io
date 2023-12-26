@@ -1,0 +1,1221 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" media="print" onload="this.media='all'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="King">
+  <meta name="keywords" content="King,博客,java,vue,nuxt,开发，博客系统，程序员，程序猿">
+  
+    <meta name="description" content="Docker 是基于Go语言实现的开源容器项目。利用操作系统本身已有的机制和特性，可以实现远超传统虚拟机的轻量级虚拟化（通俗解释：Docker内嵌极小型系统，例如Linux只有5M多，windows也是）。它是内核级的虚拟化。期望达到使项目运行环境“一次封装，到处运行的目的”。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker使用手册">
+<meta property="og:url" content="http://www.zibbo.xyz/king/7c29175f.html">
+<meta property="og:site_name" content="一屋橘子香">
+<meta property="og:description" content="Docker 是基于Go语言实现的开源容器项目。利用操作系统本身已有的机制和特性，可以实现远超传统虚拟机的轻量级虚拟化（通俗解释：Docker内嵌极小型系统，例如Linux只有5M多，windows也是）。它是内核级的虚拟化。期望达到使项目运行环境“一次封装，到处运行的目的”。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img2.baidu.com/it/u=2705144990,3944592429&fm=253&fmt=auto&app=138&f=JPEG?w=634&h=371">
+<meta property="article:published_time" content="2020-07-03T13:01:37.000Z">
+<meta property="article:modified_time" content="2023-08-29T06:13:48.000Z">
+<meta property="article:author" content="King">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="运维">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img2.baidu.com/it/u=2705144990,3944592429&fm=253&fmt=auto&app=138&f=JPEG?w=634&h=371">
+  
+  
+  
+    <meta name="baidu-site-verification" content="codeva-OJCLMIKcAp" />
+  
+  <title>Docker使用手册 - 一屋橘子香</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/mac.css">
+<link rel="stylesheet" href="/css/font.css">
+<link rel="stylesheet" href="/css/hover-min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.zibbo.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="一屋橘子香" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>一屋橘子香</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                <span>订阅</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">Docker使用手册</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-07-03 21:01" pubdate>
+          2020年7月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          12k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          99 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Docker使用手册</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、Docker简介"><a href="#一、Docker简介" class="headerlink" title="一、Docker简介"></a>一、Docker简介</h1><blockquote>
+<p>Docker 是基于Go语言实现的开源容器项目。利用操作系统本身已有的机制和特性，可以实现远超传统虚拟机的轻量级虚拟化（通俗解释：Docker内嵌极小型系统，例如Linux只有5M多，windows也是）。它是内核级的虚拟化。期望达到使项目运行环境“一次封装，到处运行的目的”。</p>
+</blockquote>
+<blockquote>
+<p>在Docker里面可以设置使用Windows还是Linux系统，默认是用Linux系统，基于Ubuntu的，只有5M多，包含了最基本功能。<br>利用docker创建的运行环境叫做docker容器，容器是通过docker镜像创建的，docker镜像文件可以放在私有仓库中也可以放在共有仓库中。<br>官网地址：<a target="_blank" rel="noopener" href="https://www.docker.com/">https://www.docker.com</a><br>DockerFile指令</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs DockerFile"><span class="hljs-keyword">FROM</span>		<span class="hljs-comment"># 基础镜像，依赖于谁</span>
+<span class="hljs-keyword">MAINTAINER</span>	<span class="hljs-comment"># 作者：姓名+邮箱</span>
+<span class="hljs-keyword">RUN</span><span class="language-bash">			<span class="hljs-comment"># 镜像构建的时候需要运行的命令</span></span>
+<span class="hljs-keyword">ADD</span><span class="language-bash">			<span class="hljs-comment"># 添加，可以添加其他镜像</span></span>
+<span class="hljs-keyword">WORKDIR</span><span class="language-bash">		<span class="hljs-comment"># 镜像的工作目录</span></span>
+<span class="hljs-keyword">VOLUME</span><span class="language-bash">		<span class="hljs-comment"># 挂载的目录</span></span>
+<span class="hljs-keyword">EXPOSE</span>		<span class="hljs-comment"># 暴露的端口</span>
+<span class="hljs-keyword">CMD</span><span class="language-bash">			<span class="hljs-comment"># 指定这个容器启动的时候需要运行的命令，最后一个才会生效</span></span>
+<span class="hljs-keyword">ENTRYPOINT</span><span class="language-bash">	<span class="hljs-comment"># 指定这个容器启动的时候需要运行的命令，可以追加</span></span>
+<span class="hljs-keyword">ONBUILD</span>		<span class="hljs-comment"># 当dockerfile被构建的时候触发的指令</span>
+<span class="hljs-keyword">COPY</span><span class="language-bash">		<span class="hljs-comment"># 类似ADD，讲文件拷贝到镜像中</span></span>
+<span class="hljs-keyword">ENV</span>			<span class="hljs-comment"># 构建的时候设置环境变量</span>
+
+<span class="hljs-keyword">ARG</span>			<span class="hljs-comment"># 创建镜像过程中使用的变量</span>
+<span class="hljs-keyword">LABEL</span><span class="language-bash">		<span class="hljs-comment"># 为生成的镜像添加元数据标签信息</span></span>
+<span class="hljs-keyword">STOPSIGNAL</span>	<span class="hljs-comment"># 退出的信号值</span>
+<span class="hljs-keyword">HEALTHCHECK</span><span class="language-bash">	<span class="hljs-comment"># 配置所启动容器如何进行健康检查</span></span>
+<span class="hljs-keyword">SHELL</span><span class="language-bash">		<span class="hljs-comment"># 指定默认shell类型</span></span></code></pre></div>
+
+<h1 id="二、Linux系统中Docker-安装与启动"><a href="#二、Linux系统中Docker-安装与启动" class="headerlink" title="二、Linux系统中Docker 安装与启动"></a>二、Linux系统中Docker 安装与启动</h1><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><h3 id="1-1-下载docker-ce-repo"><a href="#1-1-下载docker-ce-repo" class="headerlink" title="1.1.下载docker-ce repo"></a>1.1.下载docker-ce repo</h3><div class="code-wrapper"><pre><code class="hljs awk">curl https:<span class="hljs-regexp">//</span>download.docker.com<span class="hljs-regexp">/linux/</span>centos<span class="hljs-regexp">/docker-ce.repo -o /</span>etc<span class="hljs-regexp">/yum.repos.d/</span>docker-ce.repo</code></pre></div>
+
+<h3 id="1-2-安装依赖"><a href="#1-2-安装依赖" class="headerlink" title="1.2. 安装依赖"></a>1.2. 安装依赖</h3><div class="code-wrapper"><pre><code class="hljs awk">yum install -y https:<span class="hljs-regexp">//</span>download.docker.com<span class="hljs-regexp">/linux/</span>fedora<span class="hljs-regexp">/30/</span>x86_64<span class="hljs-regexp">/stable/</span>Packages/containerd.io-<span class="hljs-number">1.2</span>.<span class="hljs-number">6</span>-<span class="hljs-number">3.3</span>.fc30.x86_64.rpm</code></pre></div>
+
+<h3 id="1-3-安装docker-ce"><a href="#1-3-安装docker-ce" class="headerlink" title="1.3. 安装docker-ce"></a>1.3. 安装docker-ce</h3><div class="code-wrapper"><pre><code class="hljs cmake">yum <span class="hljs-keyword">install</span> -y docker-ce</code></pre></div>
+
+<h2 id="2-启动"><a href="#2-启动" class="headerlink" title="2.启动"></a>2.启动</h2><h3 id="2-1-启动命令"><a href="#2-1-启动命令" class="headerlink" title="2.1. 启动命令"></a>2.1. 启动命令</h3><div class="code-wrapper"><pre><code class="hljs crmsh">systemctl <span class="hljs-literal">start</span> docker</code></pre></div>
+
+<h3 id="2-2-查看Docker状态"><a href="#2-2-查看Docker状态" class="headerlink" title="2.2. 查看Docker状态"></a>2.2. 查看Docker状态</h3><div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">docker</span> <span class="hljs-literal">info</span></code></pre></div>
+
+<p>结果如下:</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211003144315752.png" srcset="/img/loading.gif" lazyload alt="image-20211003144315752"></p>
+<h2 id="3-镜像加速器配置"><a href="#3-镜像加速器配置" class="headerlink" title="3.镜像加速器配置"></a>3.镜像加速器配置</h2><p>默认情况下Docker从Docker Hub上下载镜像资源，但速度很慢，可以通过配置国内的镜像加速器来解决。</p>
+<h3 id="3-1-使用阿里云镜像"><a href="#3-1-使用阿里云镜像" class="headerlink" title="3.1. 使用阿里云镜像"></a>3.1. 使用阿里云镜像</h3><p>网址：<a target="_blank" rel="noopener" href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
+<h3 id="3-2-进入容器镜像服务"><a href="#3-2-进入容器镜像服务" class="headerlink" title="3.2. 进入容器镜像服务"></a>3.2. 进入容器镜像服务</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/wps57F3.tmp.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="3-3-进入管理控制台"><a href="#3-3-进入管理控制台" class="headerlink" title="3.3.  进入管理控制台"></a>3.3.  进入管理控制台</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/wpsA606.tmp.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="3-4-进入镜像加速器"><a href="#3-4-进入镜像加速器" class="headerlink" title="3.4. 进入镜像加速器"></a>3.4. 进入镜像加速器</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/wps5050.tmp.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="3-5-选择对应的OS并配置"><a href="#3-5-选择对应的OS并配置" class="headerlink" title="3.5. 选择对应的OS并配置"></a>3.5. 选择对应的OS并配置</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/wpsDEF5.tmp.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="3-6-验证镜像加速器是否配置成功"><a href="#3-6-验证镜像加速器是否配置成功" class="headerlink" title="3.6. 验证镜像加速器是否配置成功"></a>3.6. 验证镜像加速器是否配置成功</h3><p>通过docker info命令验证镜像加速器配置，结果如下：</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211003145815941.png" srcset="/img/loading.gif" lazyload alt="image-20211003145815941"></p>
+<h1 id="三、安装redis"><a href="#三、安装redis" class="headerlink" title="三、安装redis"></a>三、安装redis</h1><h2 id="1-获取redis镜像"><a href="#1-获取redis镜像" class="headerlink" title="1.获取redis镜像"></a>1.获取redis镜像</h2><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull redis:<span class="hljs-number">6</span>.<span class="hljs-number">0</span>.<span class="hljs-number">5</span></code></pre></div>
+
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211003150145019.png" srcset="/img/loading.gif" lazyload alt="image-20211003150145019"></p>
+<h2 id="2-查看本地镜像"><a href="#2-查看本地镜像" class="headerlink" title="2.查看本地镜像"></a>2.查看本地镜像</h2><div class="code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker images</span></code></pre></div>
+
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211003150246436.png" srcset="/img/loading.gif" lazyload alt="image-20211003150246436"></p>
+<h3 id="3-从官网获取redis-config配置文件"><a href="#3-从官网获取redis-config配置文件" class="headerlink" title="3.从官网获取redis.config配置文件"></a>3.从官网获取redis.config配置文件</h3><div class="code-wrapper"><pre><code class="hljs awk"><span class="hljs-comment"># 进入文件夹</span>
+cd <span class="hljs-regexp">/local/</span>docker
+wget http:<span class="hljs-regexp">//</span>download.redis.io<span class="hljs-regexp">/redis-stable/</span>redis.conf   <span class="hljs-regexp">//</span>下载redis配置文件
+vim redis.conf  <span class="hljs-regexp">//</span>修改配置文件</code></pre></div>
+
+<blockquote>
+<p>1.注释bind 127.0.0.1。这里限制redis只能本地访问，注释掉之后使redis可以外部访问；<br>2.protected-mode yes 修改为 protected-mode no。默认yes，开启保护模式，限制仅本地访问，改为no之后使redis可以外部访问；<br>3.daemonize no 。默认no，当前界面将进入redis的命令行界面，exit强制退出或者关闭连接工具(putty,xshell等)都会导致redis进程退出。 改为yes意为以守护进程方式启动，该模式下，redis会在后台运行，并将进程pid号写入至redis.conf选项pidfile设置的文件中，此时redis将一直运行，除非手动kill该进程，如果改为yes会使以配置文件方式启动redis的方式失败。<br>4.requirepass pwd。这里的pwd是自己设置的密码，可以不开启，不开启表示无需密码即可连接。<br>5.databases 16。默认数据库个数16，可以不修改。<br>6.appendonly no。默认 no，表示不开启aof方式持久化，改为appendonly yes表示开启aof，可以不修改该配置。</p>
+</blockquote>
+<p>文件夹如下:</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211003183929810.png" srcset="/img/loading.gif" lazyload alt="image-20211003183929810"></p>
+<h3 id="4-启动redis"><a href="#4-启动redis" class="headerlink" title="4. 启动redis"></a>4. 启动redis</h3><div class="code-wrapper"><pre><code class="hljs awk">docker run \
+--name redis \
+-p <span class="hljs-number">6379</span>:<span class="hljs-number">6379</span> \
+--restart unless-stopped \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/redis/</span>data:/data \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/redis/</span>conf<span class="hljs-regexp">/redis.conf:/</span>etc<span class="hljs-regexp">/redis/</span>redis.conf \
+-d redis redis-server <span class="hljs-regexp">/etc/</span>redis/redis.conf \</code></pre></div>
+
+<h3 id="5-查看redis运行是否成功"><a href="#5-查看redis运行是否成功" class="headerlink" title="5. 查看redis运行是否成功"></a>5. 查看redis运行是否成功</h3><div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-comment">#查看redis容器运行</span>
+docker ps |grep redis 
+<span class="hljs-comment">#进入redis容器中</span>
+docker <span class="hljs-built_in">exec</span> -it redis /bin/bash
+<span class="hljs-comment">#使用redis客户端</span>
+redis-cli
+<span class="hljs-comment">#设置密码</span>
+config <span class="hljs-built_in">set</span> requirepass 123456</code></pre></div>
+
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211003220721877.png" srcset="/img/loading.gif" lazyload alt="image-20211003220721877"></p>
+<h1 id="四、安装mysql"><a href="#四、安装mysql" class="headerlink" title="四、安装mysql"></a>四、安装mysql</h1><h2 id="1-拉取镜像"><a href="#1-拉取镜像" class="headerlink" title="1. 拉取镜像"></a>1. 拉取镜像</h2><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull mysql:<span class="hljs-number">8</span>.<span class="hljs-number">0</span>.<span class="hljs-number">16</span></code></pre></div>
+
+<h2 id="2-创建数据目录和配置文件"><a href="#2-创建数据目录和配置文件" class="headerlink" title="2. 创建数据目录和配置文件"></a>2. 创建数据目录和配置文件</h2><div class="code-wrapper"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@king</span> docker]<span class="hljs-meta"># mkdir -p mysql</span>
+[root<span class="hljs-symbol">@king</span> docker]<span class="hljs-meta"># cd mysql/</span>
+[root<span class="hljs-symbol">@king</span> mysql]<span class="hljs-meta"># mkdir data</span>
+[root<span class="hljs-symbol">@king</span> mysql]<span class="hljs-meta"># mkdir conf</span>
+[root<span class="hljs-symbol">@king</span> mysql]<span class="hljs-meta"># chmod -R 755 /local/docker/mysql</span>
+[root<span class="hljs-symbol">@king</span> mysql]<span class="hljs-meta"># cd conf/</span>
+[root<span class="hljs-symbol">@king</span> conf]<span class="hljs-meta"># vim my.cnf</span></code></pre></div>
+
+<p>添加以下内容到上述创建的配置文件中</p>
+<div class="code-wrapper"><pre><code class="hljs shell">[client]
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">socket = /usr/mysql/mysqld.sock</span>
+
+default-character-set = utf8mb4
+
+[mysqld]
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">pid-file        = /var/run/mysqld/mysqld.pid</span>
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">socket          = /var/run/mysqld/mysqld.sock</span>
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">datadir         = /var/lib/mysql</span>
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">socket = /usr/mysql/mysqld.sock</span>
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">pid-file = /usr/mysql/mysqld.pid</span>
+
+datadir = /local/docker/mysql/data
+
+character_set_server = utf8mb4
+
+collation_server = utf8mb4_bin
+
+secure-file-priv= NULL
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_"># </span><span class="language-bash">Disabling symbolic-links is recommended to prevent assorted security risks</span>
+
+symbolic-links=0
+<span class="hljs-meta prompt_"></span>
+<span class="hljs-meta prompt_"># </span><span class="language-bash">Custom config should go here</span>
+
+!includedir /etc/mysql/conf.d/
+</code></pre></div>
+
+<h2 id="3-启动创建容器"><a href="#3-启动创建容器" class="headerlink" title="3.启动创建容器"></a>3.启动创建容器</h2><div class="code-wrapper"><pre><code class="hljs awk">docker run --restart=unless-stopped -d --name mysql \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/mysql/</span>conf<span class="hljs-regexp">/my.cnf:/</span>etc<span class="hljs-regexp">/mysql/my</span>.cnf \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/mysql/</span>data:<span class="hljs-regexp">/var/</span>lib/mysql -p <span class="hljs-number">3306</span>:<span class="hljs-number">3306</span> -e MYSQL_ROOT_PASSWORD=<span class="hljs-number">123456</span> mysql:<span class="hljs-number">8.0</span>.<span class="hljs-number">16</span></code></pre></div>
+
+<p>查看容器启动情况</p>
+<div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">docker</span> <span class="hljs-literal">info</span></code></pre></div>
+
+<h2 id="4-修改mysql密码以及可访问主机"><a href="#4-修改mysql密码以及可访问主机" class="headerlink" title="4.修改mysql密码以及可访问主机"></a>4.修改mysql密码以及可访问主机</h2><ul>
+<li>进入mysql容器内部</li>
+</ul>
+<div class="code-wrapper"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@king</span> conf]<span class="hljs-meta"># docker exec -it mysql /bin/bash</span></code></pre></div>
+
+<ul>
+<li><p>连接mysql</p>
+<div class="code-wrapper"><pre><code class="hljs css">mysql -uroot -<span class="hljs-selector-tag">p</span></code></pre></div></li>
+<li><p>使用mysql库</p>
+<div class="code-wrapper"><pre><code class="hljs actionscript"><span class="hljs-keyword">use</span> mysql</code></pre></div></li>
+<li><p>修改访问主机以及密码等，设置为所有主机可访问</p>
+<div class="code-wrapper"><pre><code class="hljs pgsql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;123456&#x27;</span>;</code></pre></div></li>
+<li><p>刷新</p>
+<div class="code-wrapper"><pre><code class="hljs arduino">flush privileges</code></pre></div></li>
+</ul>
+<h1 id="五、安装JDK8"><a href="#五、安装JDK8" class="headerlink" title="五、安装JDK8"></a>五、安装JDK8</h1><h2 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h2><div class="code-wrapper"><pre><code class="hljs shell">yum install java-1.8.0-openjdk* -y</code></pre></div>
+<p>执行过这条命令无需配置，直接可以使用。</p>
+<h2 id="1-上传文件"><a href="#1-上传文件" class="headerlink" title="1.上传文件"></a>1.上传文件</h2><p>将jdk文件上传到/local/upload</p>
+<h2 id="2-解压压缩包"><a href="#2-解压压缩包" class="headerlink" title="2.解压压缩包"></a>2.解压压缩包</h2><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">tar</span> zxf jdk-<span class="hljs-number">8</span>u311-linux-x64.tar.gz</code></pre></div>
+
+<h2 id="3-移动文件"><a href="#3-移动文件" class="headerlink" title="3.移动文件"></a>3.移动文件</h2><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">mv</span> jdk1.<span class="hljs-number">8</span>.<span class="hljs-number">0</span>_311 /local/soft/jdk</code></pre></div>
+
+<h2 id="4-配置环境变量"><a href="#4-配置环境变量" class="headerlink" title="4.配置环境变量"></a>4.配置环境变量</h2><blockquote>
+<p>在linux中/etc/profile此文件为环境变量配置文件。</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs routeros"><span class="hljs-comment">#export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL</span>
+<span class="hljs-built_in">export</span> <span class="hljs-attribute">JAVA_HOME</span>=/local/soft/jdk
+<span class="hljs-built_in">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-variable">$JAVA_HOME</span>/bin:$PATH</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs vim">#进入etc文件夹并且编译<span class="hljs-keyword">profile</span>文件
+<span class="hljs-keyword">cd</span> /etc &amp;&amp; <span class="hljs-keyword">vim</span> <span class="hljs-keyword">profile</span></code></pre></div>
+
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004113003179.png" srcset="/img/loading.gif" lazyload alt="image-20211004113003179"></p>
+<h2 id="5-解析文件"><a href="#5-解析文件" class="headerlink" title="5.解析文件"></a>5.解析文件</h2><blockquote>
+<p>不解析，必须通过重启才能生效。只要解析不需要重启了</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs gradle"><span class="hljs-keyword">source</span> <span class="hljs-regexp">/etc/</span>profile</code></pre></div>
+
+<h2 id="6-查看配置是否成功"><a href="#6-查看配置是否成功" class="headerlink" title="6.查看配置是否成功"></a>6.查看配置是否成功</h2><div class="code-wrapper"><pre><code class="hljs applescript">java -<span class="hljs-built_in">version</span></code></pre></div>
+
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004113221989.png" srcset="/img/loading.gif" lazyload alt="image-20211004113221989"></p>
+<h1 id="六、安装solr"><a href="#六、安装solr" class="headerlink" title="六、安装solr"></a>六、安装solr</h1><h2 id="1-上传文件-1"><a href="#1-上传文件-1" class="headerlink" title="1.上传文件"></a>1.上传文件</h2><blockquote>
+<p>上传压缩包solr-8.2.0.tgz到/local/upload中。</p>
+</blockquote>
+<h2 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h2><div class="code-wrapper"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@king</span> upload]<span class="hljs-meta"># tar zxf solr-8.2.0.tgz </span></code></pre></div>
+
+<h2 id="3-移动文件-1"><a href="#3-移动文件-1" class="headerlink" title="3.移动文件"></a>3.移动文件</h2><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">mv</span> solr-<span class="hljs-number">8</span>.<span class="hljs-number">2</span>.<span class="hljs-number">0</span> /local/soft/solr</code></pre></div>
+
+<h2 id="4-Solr常用目录简介"><a href="#4-Solr常用目录简介" class="headerlink" title="4.Solr常用目录简介"></a>4.Solr常用目录简介</h2><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004113700431.png" srcset="/img/loading.gif" lazyload alt="image-20211004113700431"></p>
+<blockquote>
+<p>bin目录：可执行文件所在目录。<br>dist目录：Solr对外提供的核心、扩展、插件等代码jar文件。<br>server目录：Solr搜索应用服务器核心目录。<br>server/solr：Solr的索引库所在位置<br>server/solr-webapp：Solr的WAR核心应用<br>server/etc：Solr的核心配置</p>
+</blockquote>
+<h2 id="5-修改启动参数"><a href="#5-修改启动参数" class="headerlink" title="5.修改启动参数"></a>5.修改启动参数</h2><blockquote>
+<p>修改启动参数，否则启动时报警告。提示设置SOLR_ULIMIT_CHECKS=false</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs vim">[root@king solr]# <span class="hljs-keyword">cd</span> bin &amp;&amp; <span class="hljs-keyword">vim</span> solr.in.<span class="hljs-keyword">sh</span></code></pre></div>
+
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/wps1976.tmp.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="6-启动solr"><a href="#6-启动solr" class="headerlink" title="6.启动solr"></a>6.启动solr</h2><blockquote>
+<p>Solr内嵌Jetty，直接启动即可。默认监听8983端口。<br>Solr默认不推荐root账户启动，如果是root账户启动需要添加-force参数。</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs bash">./solr start -force</code></pre></div>
+
+<p>启动成功如下图所示:</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004114327791.png" srcset="/img/loading.gif" lazyload alt="image-20211004114327791"></p>
+<p>==注意:阿里云服务器8983端口放行==</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004114629744.png" srcset="/img/loading.gif" lazyload alt="image-20211004114629744"></p>
+<h2 id="7-可视化管理界面"><a href="#7-可视化管理界面" class="headerlink" title="7.可视化管理界面"></a>7.可视化管理界面</h2><blockquote>
+<p>在浏览器输入ip:8983就可以打开solr可视化管理页面了</p>
+</blockquote>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004114856090.png" srcset="/img/loading.gif" lazyload alt="image-20211004114856090"></p>
+<p>左侧有5个菜单。分别是：<br>（1）Dashboard：面板显示Solr的总体信息。<br>（2）Logging：日志<br>（3）Core Admin：Solr的核心。类似于数据的Database<br>（4）Java Perperties：所有Java相关属性。<br>（5）Thread Dump：线程相关信息。<br>（6）如果有Core，将显示在此处。</p>
+<h2 id="8-创建核心-索引库"><a href="#8-创建核心-索引库" class="headerlink" title="8.创建核心(索引库)"></a>8.创建核心(索引库)</h2><p>==Solr安装完成后默认是没有核心的。需要手动配置。==</p>
+<p><strong>需要在solr/server/solr下新建文件夹，并给定配置文件，否则无法建立。</strong></p>
+<h3 id="8-1-新建目录"><a href="#8-1-新建目录" class="headerlink" title="8.1 新建目录"></a>8.1 新建目录</h3><p>在 /local/soft/solr/server/solr中新建自定义名称目录。这里我创建了名为blog的目录</p>
+<div class="code-wrapper"><pre><code class="hljs autoit"><span class="hljs-meta">#进入对应文件夹</span>
+[root<span class="hljs-symbol">@king</span> ~]<span class="hljs-meta"># cd /local/soft/solr/server/solr</span>
+<span class="hljs-meta">#创建blog文件夹</span>
+[root<span class="hljs-symbol">@king</span> solr]<span class="hljs-meta"># mkdir blog</span></code></pre></div>
+
+<h3 id="8-2-复制配置文件"><a href="#8-2-复制配置文件" class="headerlink" title="8.2 复制配置文件"></a>8.2 复制配置文件</h3><blockquote>
+<p>在configsets里面包含了_default和sample_techproducts_configs。里面都是配置文件示例。_default属于默认配置，较纯净。sample_techproducts_configs是带有了一些配置示例。</p>
+</blockquote>
+<div class="code-wrapper"><pre><code class="hljs gradle">[root@king solr]# cp -r configsets<span class="hljs-regexp">/_default/</span>conf<span class="hljs-regexp">/ blog/</span></code></pre></div>
+
+<h3 id="8-3-创建-core"><a href="#8-3-创建-core" class="headerlink" title="8.3 创建 core"></a>8.3 创建 core</h3><p>在可视化管理界面填写如下信息</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004174045581.png" srcset="/img/loading.gif" lazyload alt="image-20211004174045581"></p>
+<p>最后点击Add Core按钮创建</p>
+<p>创建成功结果如下：</p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004174415937.png" srcset="/img/loading.gif" lazyload alt="image-20211004174415937"></p>
+<h2 id="9-安装中文分词器"><a href="#9-安装中文分词器" class="headerlink" title="9.安装中文分词器"></a>9.安装中文分词器</h2><h3 id="9-1上传文件"><a href="#9-1上传文件" class="headerlink" title="9.1上传文件"></a>9.1上传文件</h3><p>上传ik-analyzer-8.2.0.jar到/local/upload文件夹下</p>
+<h3 id="9-2复制文件"><a href="#9-2复制文件" class="headerlink" title="9.2复制文件"></a>9.2复制文件</h3><p>将ik-analyzer-8.2.0.jar文件复制/local/soft/solr/server/solr-webapp/webapp/WEB-INF/lib文件夹下</p>
+<div class="code-wrapper"><pre><code class="hljs shell">[root@king upload]# cp ik-analyzer-8.2.0.jar /local/soft/solr/server/solr-webapp/webapp/WEB-INF/lib/</code></pre></div>
+
+<h3 id="9-3修改配置文件"><a href="#9-3修改配置文件" class="headerlink" title="9.3修改配置文件"></a>9.3修改配置文件</h3><h4 id="修改managed-schema文件"><a href="#修改managed-schema文件" class="headerlink" title="修改managed-schema文件"></a>修改managed-schema文件</h4><div class="code-wrapper"><pre><code class="hljs shell">[root@king /]# vim /local/soft/solr/server/solr/blog/conf/managed-schema</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs shell">&lt;fieldType name=&quot;text_zh_cn&quot; class=&quot;solr.TextField&quot;&gt;
+            &lt;analyzer&gt;
+                    &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;false&quot; conf=&quot;ik.conf&quot;/&gt;
+                    &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;
+            &lt;/analyzer&gt;
+            &lt;analyzer type=&quot;query&quot;&gt;
+                    &lt;tokenizer class=&quot;org.wltea.analyzer.lucene.IKTokenizerFactory&quot; useSmart=&quot;true&quot; conf=&quot;ik.conf&quot;/&gt;
+                    &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;
+            &lt;/analyzer&gt;
+&lt;/fieldType&gt;
+&lt;!--自定义字段，类似于设计数据表一样--&gt;
+	&lt;!--ID--&gt;
+	&lt;!--ID 已经在前面有了--&gt;
+	&lt;!--浏览量--&gt;
+	&lt;field name=&quot;blog_view_count&quot; type=&quot;pint&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--标题--&gt;
+	&lt;field name=&quot;blog_title&quot; type=&quot;text_zh_cn&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--主题--&gt;
+	&lt;field name=&quot;blog_summary&quot; type=&quot;text_zh_cn&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--创建时间--&gt;
+	&lt;field name=&quot;blog_create_time&quot; type=&quot;pdate&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--标签--&gt;
+	&lt;field name=&quot;blog_labels&quot; type=&quot;pstring&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--文章链接--&gt;
+	&lt;field name=&quot;blog_url&quot; type=&quot;pstring&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--分类ID--&gt;
+	&lt;field name=&quot;blog_category_id&quot; type=&quot;pstring&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;false&quot; /&gt;
+	&lt;!--搜索item--&gt;
+	&lt;field name=&quot;search_item&quot; type=&quot;text_zh_cn&quot; indexed=&quot;true&quot; stored=&quot;true&quot; required=&quot;true&quot; multiValued=&quot;true&quot; /&gt;
+	&lt;copyField source=&quot;blog_title&quot; dest=&quot;search_item&quot;/&gt;
+	&lt;copyField source=&quot;blog_summary&quot; dest=&quot;search_item&quot;/&gt;
+	&lt;copyField source=&quot;blog_labels&quot; dest=&quot;search_item&quot;/&gt;</code></pre></div>
+
+<blockquote>
+<p>排版：Esc 退出编辑状态下：gg=G</p>
+</blockquote>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004220435973.png" srcset="/img/loading.gif" lazyload alt="image-20211004220435973"></p>
+<h3 id="9-4-重启"><a href="#9-4-重启" class="headerlink" title="9.4 重启"></a>9.4 重启</h3><div class="code-wrapper"><pre><code class="hljs awk">[root@king <span class="hljs-regexp">/]# cd /</span>local<span class="hljs-regexp">/soft/</span>solr<span class="hljs-regexp">/bin/</span>
+[root@king bin]<span class="hljs-comment"># ./solr stop -all</span>
+[root@king bin]<span class="hljs-comment"># ./solr start -force</span></code></pre></div>
+
+<h3 id="9-5-验证"><a href="#9-5-验证" class="headerlink" title="9.5 验证"></a>9.5 验证</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211004225457462.png" srcset="/img/loading.gif" lazyload alt="image-20211004225457462"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/10139744-19785d5c0484474c.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>图片来源于:<a target="_blank" rel="noopener" href="https://upload-images.jianshu.io/upload_images/10139744-19785d5c0484474c.jpg">https://upload-images.jianshu.io/upload_images/10139744-19785d5c0484474c.jpg</a></p>
+<h3 id="9-6-删除全部数据"><a href="#9-6-删除全部数据" class="headerlink" title="9.6 删除全部数据"></a>9.6 删除全部数据</h3><blockquote>
+<p>1)documents type 选择 XML<br>2)documents 输入下面语句</p>
+<div class="code-wrapper"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">delete</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">query</span>&gt;</span>*:*<span class="hljs-tag">&lt;/<span class="hljs-name">query</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">delete</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">commit</span>/&gt;</span></code></pre></div>
+
+
+</blockquote>
+<h3 id="10-使用DockerFile构建solr镜像"><a href="#10-使用DockerFile构建solr镜像" class="headerlink" title="10 使用DockerFile构建solr镜像"></a>10 使用DockerFile构建solr镜像</h3><h4 id="10-1-创建solr目录"><a href="#10-1-创建solr目录" class="headerlink" title="10.1 创建solr目录"></a>10.1 创建solr目录</h4><div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> solr</code></pre></div>
+
+<h4 id="10-2-新建docker-compose-yml文件"><a href="#10-2-新建docker-compose-yml文件" class="headerlink" title="10.2 新建docker-compose.yml文件"></a>10.2 新建docker-compose.yml文件</h4><div class="code-wrapper"><pre><code class="hljs yml"><span class="hljs-attr">version:</span> <span class="hljs-string">&#x27;3.1&#x27;</span>
+<span class="hljs-attr">services:</span>
+  <span class="hljs-attr">solr:</span>
+    <span class="hljs-attr">build:</span> <span class="hljs-string">solrWithIKAnalyzer</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">container_name:</span> <span class="hljs-string">blog_solr</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-number">8983</span><span class="hljs-string">:8983</span></code></pre></div>
+
+<h4 id="10-3-将solrWithIKAnalyzer文件夹下的内容全部放入solr文件夹下"><a href="#10-3-将solrWithIKAnalyzer文件夹下的内容全部放入solr文件夹下" class="headerlink" title="10.3 将solrWithIKAnalyzer文件夹下的内容全部放入solr文件夹下"></a>10.3 将solrWithIKAnalyzer文件夹下的内容全部放入solr文件夹下</h4><p>solrWithIKAnalyzer文件夹结构如下</p>
+<p><img src="https://gitee.com/jinguoguang/images/raw/master/img/20220106095732.png" srcset="/img/loading.gif" lazyload alt="image-20220106095731927"></p>
+<h4 id="10-4-solrWithIKAnalyzer目录下新建Dockerfile文件"><a href="#10-4-solrWithIKAnalyzer目录下新建Dockerfile文件" class="headerlink" title="10.4  solrWithIKAnalyzer目录下新建Dockerfile文件"></a>10.4  solrWithIKAnalyzer目录下新建Dockerfile文件</h4><div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment">#新建Dockerfile文件</span>
+vim Dockerfile
+<span class="hljs-comment">#填写如下内容</span></code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs dockerfile"><span class="hljs-keyword">MAINTAINER</span> king
+<span class="hljs-comment"># 创建 Core，切换目录</span>
+<span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /opt/solr/server/solr</span>
+<span class="hljs-comment"># 创建目录</span>
+<span class="hljs-keyword">RUN</span><span class="language-bash"> <span class="hljs-built_in">mkdir</span> blog_core</span>
+<span class="hljs-comment"># 切换目录</span>
+<span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /opt/solr/server/solr/blog_core</span>
+<span class="hljs-comment"># 把这个Core名称添加到配置文件中，这样在前端就可以看到了</span>
+<span class="hljs-keyword">RUN</span><span class="language-bash"> <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;name=blog_core&#x27;</span> &gt; core.properties</span>
+<span class="hljs-comment"># 从模版中复制一份出来配置文件出来</span>
+<span class="hljs-keyword">RUN</span><span class="language-bash"> <span class="hljs-built_in">cp</span> -r /opt/solr/server/solr/configsets/sample_techproducts_configs/conf/ .</span>
+<span class="hljs-comment"># 进入到容器的lib文件夹</span>
+<span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /opt/solr/server/solr-webapp/webapp/WEB-INF/lib</span>
+<span class="hljs-comment"># 中文分词器</span>
+<span class="hljs-keyword">RUN</span><span class="language-bash"> <span class="hljs-built_in">cp</span> -r /opt/solr/contrib/analysis-extras/lucene-libs/lucene-analyzers-smartcn-5.5.5.jar .</span>
+<span class="hljs-comment"># 复制两个jar包进去</span>
+<span class="hljs-keyword">ADD</span><span class="language-bash"> ik-analyzer-solr5-5.x.jar .</span>
+<span class="hljs-keyword">ADD</span><span class="language-bash"> solr-analyzer-ik-5.1.0.jar .</span>
+<span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /opt/solr/server/solr-webapp/webapp/WEB-INF</span>
+<span class="hljs-comment"># 复制字典</span>
+<span class="hljs-keyword">ADD</span><span class="language-bash"> ext.dic .</span>
+<span class="hljs-keyword">ADD</span><span class="language-bash"> stopword.dic .</span>
+<span class="hljs-comment"># 配置扩展字典的配置文件</span>
+<span class="hljs-keyword">ADD</span><span class="language-bash"> IKAnalyzer.cfg.xml .</span>
+<span class="hljs-comment"># 增加分词配置</span>
+<span class="hljs-keyword">COPY</span><span class="language-bash"> managed-schema /opt/solr/server/solr/blog_core/conf</span>
+<span class="hljs-keyword">WORKDIR</span><span class="language-bash"> /opt/solr</span></code></pre></div>
+
+<h4 id="10-5-在solrWithIKAnalyzer目录下构建"><a href="#10-5-在solrWithIKAnalyzer目录下构建" class="headerlink" title="10.5 在solrWithIKAnalyzer目录下构建"></a>10.5 在solrWithIKAnalyzer目录下构建</h4><div class="code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> build -t blog_solr:<span class="hljs-number">1</span>.<span class="hljs-number">0</span> .
+<span class="hljs-comment">#注意后面有个小点不要忽视</span></code></pre></div>
+
+<h4 id="10-6-在solr目录下使用docker-compose启动容器"><a href="#10-6-在solr目录下使用docker-compose启动容器" class="headerlink" title="10.6 在solr目录下使用docker-compose启动容器"></a>10.6 在solr目录下使用docker-compose启动容器</h4><blockquote>
+<p>Docker Compose是一个用来定义和运行复杂应用的Docker工具。一个使用Docker容器的应用，通常由多个容器组成。使用Docker Compose不再需要使用shell脚本来启动容器。<br>Compose 通过一个配置文件来管理多个Docker容器，在配置文件中，所有的容器通过services来定义，然后使用docker-compose脚本来启动，停止和重启应用，和应用中的服务以及所有依赖服务的容器，非常适合组合使用多个容器进行开发的场景。</p>
+</blockquote>
+<h5 id="安装docker-composr"><a href="#安装docker-composr" class="headerlink" title="安装docker-composr"></a>安装docker-composr</h5><ul>
+<li>从github上下载docker-compose二进制文件安装</li>
+</ul>
+ <div class="code-wrapper"><pre><code class="hljs sh">sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`<span class="hljs-built_in">uname</span> -s`-`<span class="hljs-built_in">uname</span> -m` -o /usr/local/bin/docker-compose</code></pre></div>
+
+<p>  若是github访问太慢，也可以用daocloud下载</p>
+<div class="code-wrapper"><pre><code class="hljs sh">sudo curl -L https://get.daocloud.io/docker/compose/releases/download/1.25.1/docker-compose-`<span class="hljs-built_in">uname</span> -s`-`<span class="hljs-built_in">uname</span> -m` -o /usr/local/bin/docker-compose</code></pre></div>
+
+<ul>
+<li>添加可执行权限</li>
+</ul>
+ <div class="code-wrapper"><pre><code class="hljs sh">sudo <span class="hljs-built_in">chmod</span> +x /usr/local/bin/docker-compose</code></pre></div>
+
+<ul>
+<li><p>测试安装结果</p>
+<div class="code-wrapper"><pre><code class="hljs sh">docker-compose --version</code></pre></div></li>
+</ul>
+<div class="code-wrapper"><pre><code class="hljs crmsh"><span class="hljs-comment">#以后台的方式运行容器。不会在终端上打印运行日志</span>
+docker-compose up -d
+<span class="hljs-comment"># 停止运行的容器，但不会删除它们。</span>
+docker-compose <span class="hljs-literal">stop</span>
+<span class="hljs-comment">#停止运行的容器，并且会删除已停止的容器以及已创建的所有网络</span>
+docker-compose down</code></pre></div>
+
+
+
+<h1 id="七、minio服务器安装"><a href="#七、minio服务器安装" class="headerlink" title="七、minio服务器安装"></a>七、minio服务器安装</h1><h2 id="1-安装-1"><a href="#1-安装-1" class="headerlink" title="1.安装"></a>1.安装</h2><h3 id="1-1拉取镜像"><a href="#1-1拉取镜像" class="headerlink" title="1.1拉取镜像"></a>1.1拉取镜像</h3><div class="code-wrapper"><pre><code class="hljs powershell">docker pull minio/minio</code></pre></div>
+
+<h3 id="1-2创建并启动容器"><a href="#1-2创建并启动容器" class="headerlink" title="1.2创建并启动容器"></a>1.2创建并启动容器</h3><div class="code-wrapper"><pre><code class="hljs powershell">docker run <span class="hljs-literal">-d</span> <span class="hljs-literal">-p</span> <span class="hljs-number">9000</span>:<span class="hljs-number">9000</span> <span class="hljs-literal">-p</span> <span class="hljs-number">50000</span>:<span class="hljs-number">50000</span> <span class="hljs-literal">--name</span> minio \
+<span class="hljs-literal">-e</span> <span class="hljs-string">&quot;MINIO_ACCESS_KEY=admin&quot;</span> \
+<span class="hljs-literal">-e</span> <span class="hljs-string">&quot;MINIO_SECRET_KEY=admin123456&quot;</span> \
+<span class="hljs-literal">-v</span> /local/docker/minio/<span class="hljs-keyword">data</span>:/<span class="hljs-keyword">data</span> \
+<span class="hljs-literal">-v</span> /local/d/minio/config:/root/.minio \
+minio/minio server <span class="hljs-literal">--console-address</span> <span class="hljs-string">&quot;:50000&quot;</span> /<span class="hljs-keyword">data</span></code></pre></div>
+
+<h3 id="1-3配置阿里云服务器安全组"><a href="#1-3配置阿里云服务器安全组" class="headerlink" title="1.3配置阿里云服务器安全组"></a>1.3配置阿里云服务器安全组</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211020210958366.png" srcset="/img/loading.gif" lazyload alt="image-20211020210958366"></p>
+<h2 id="2-登录minio服务器管理控制台"><a href="#2-登录minio服务器管理控制台" class="headerlink" title="2.登录minio服务器管理控制台"></a>2.登录minio服务器管理控制台</h2><h3 id="2-1创建游客用户"><a href="#2-1创建游客用户" class="headerlink" title="2.1创建游客用户"></a>2.1创建游客用户</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211020211208054.png" srcset="/img/loading.gif" lazyload alt="image-20211020211208054"></p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211020211340198.png" srcset="/img/loading.gif" lazyload alt="image-20211020211340198"></p>
+<blockquote>
+<p>将权限设置为只读</p>
+</blockquote>
+<h3 id="2-3创建Bucket"><a href="#2-3创建Bucket" class="headerlink" title="2.3创建Bucket"></a>2.3创建Bucket</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211020211507476.png" srcset="/img/loading.gif" lazyload alt="image-20211020211507476"></p>
+<h3 id="2-4设置Bucket权限为readwrite"><a href="#2-4设置Bucket权限为readwrite" class="headerlink" title="2.4设置Bucket权限为readwrite"></a>2.4设置Bucket权限为readwrite</h3><p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211020211701191.png" srcset="/img/loading.gif" lazyload alt="image-20211020211701191"></p>
+<p><img src="https://gitee.com/ambitions-king/picture/raw/master/img/image-20211020211729145.png" srcset="/img/loading.gif" lazyload alt="image-20211020211729145"></p>
+<h1 id="八、MongoDB服务安装"><a href="#八、MongoDB服务安装" class="headerlink" title="八、MongoDB服务安装"></a>八、MongoDB服务安装</h1><h2 id="1-拉取镜像-1"><a href="#1-拉取镜像-1" class="headerlink" title="1.拉取镜像"></a>1.拉取镜像</h2><div class="code-wrapper"><pre><code class="hljs sh">docker pull mongo</code></pre></div>
+
+<h2 id="2-创建目录"><a href="#2-创建目录" class="headerlink" title="2.创建目录"></a>2.创建目录</h2><div class="code-wrapper"><pre><code class="hljs awk">mkdir -p <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/mongo/</span>data</code></pre></div>
+
+<h2 id="3-修改目录权限"><a href="#3-修改目录权限" class="headerlink" title="3.修改目录权限"></a>3.修改目录权限</h2><div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">chmod</span> 777/local/docker/mongo/data</code></pre></div>
+
+<h2 id="4-构建并启动容器"><a href="#4-构建并启动容器" class="headerlink" title="4.构建并启动容器"></a>4.构建并启动容器</h2><div class="code-wrapper"><pre><code class="hljs routeros">docker <span class="hljs-built_in">run</span> -d --name mongodb -v /local/docker/mongo/data:/data/db -p 27017:27017 -e <span class="hljs-attribute">MONGO_INITDB_ROOT_USERNAME</span>=admin -e <span class="hljs-attribute">MONGO_INITDB_ROOT_PASSWORD</span>=admin <span class="hljs-attribute">--privileged</span>=<span class="hljs-literal">true</span> mongo:latest</code></pre></div>
+<blockquote>
+<p>参数说明<br>-d 后台运行容器</p>
+<p>–name mongodb 运行容器名</p>
+<p>-v /mydata/mongodb/datadb:/data/db 挂载目录</p>
+<p>-p 27017:27017：将27017映射到外部端口27017 将容器的27017端口映射到主机的27017端口，27017是和宿主机的通信接口，所有docker内部容器的连接使用27017接口，集群配置需连接容器内部27017端口，故最好保持前后端口一致</p>
+<p>-e MONGO_INITDB_ROOT_USERNAME=admin 指定用户名</p>
+<p>-e MONGO_INITDB_ROOT_PASSWORD=admin 指定密码</p>
+<p>–privileged=true 使得容器内的root拥有真正的root权限。否则，container内的root只是外部的一个普通用户权限</p>
+</blockquote>
+<h2 id="5-查看mongodb日志"><a href="#5-查看mongodb日志" class="headerlink" title="5.查看mongodb日志"></a>5.查看mongodb日志</h2><div class="code-wrapper"><pre><code class="hljs sh">docker logs mongodb</code></pre></div>
+
+<h2 id="6-mongodb随-docker-自启动"><a href="#6-mongodb随-docker-自启动" class="headerlink" title="6.mongodb随 docker 自启动"></a>6.mongodb随 docker 自启动</h2><div class="code-wrapper"><pre><code class="hljs sh">docker update mongodb --restart=always</code></pre></div>
+
+<p>注意：这里的 mongodb是容器的名字，不是镜像的名字。</p>
+<h2 id="7-启动-停止-重启"><a href="#7-启动-停止-重启" class="headerlink" title="7. 启动|停止|重启"></a>7. 启动|停止|重启</h2><div class="code-wrapper"><pre><code class="hljs sh">docker start mongodb
+
+docker stop mongodb
+
+docker restart mongodb</code></pre></div>
+
+<p>注意：这里的 mongodb 是容器的名字，不是镜像的名字。</p>
+<h2 id="8-进入mongodb-optional"><a href="#8-进入mongodb-optional" class="headerlink" title="8.进入mongodb (optional)"></a>8.进入mongodb (optional)</h2><div class="code-wrapper"><pre><code class="hljs sh">docker <span class="hljs-built_in">exec</span> -it mongodb /bin/bash</code></pre></div>
+
+
+
+<h1 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h1><div class="code-wrapper"><pre><code class="hljs sh">批量启动容器
+
+docker container start $(docker container <span class="hljs-built_in">ls</span> -a -q) 或 docker start $(docker container <span class="hljs-built_in">ls</span> -a -q) 
+
+批量停止容器
+
+docker container stop $(docker container <span class="hljs-built_in">ls</span> -a -q) 或 docker stop $(docker container <span class="hljs-built_in">ls</span> -a -q) 
+
+批量重启容器
+
+docker container restart $(docker container <span class="hljs-built_in">ls</span> -a -q) 或 docker restart $(docker container <span class="hljs-built_in">ls</span> -a -q) 
+
+批量删除容器
+
+docker container <span class="hljs-built_in">rm</span> $(docker container <span class="hljs-built_in">ls</span> -a -q) 或 docker <span class="hljs-built_in">rm</span> <span class="hljs-variable">$&#123;docker container ls -a -q&#125;</span>
+
+批量杀死容器
+
+docker container <span class="hljs-built_in">kill</span> $(docker container <span class="hljs-built_in">ls</span> -a -q) 或 docker <span class="hljs-built_in">kill</span> <span class="hljs-variable">$&#123;docker container ls -a -q&#125;</span>
+
+docker查询所有进程
+
+docker ps -a
+
+docker查询正常运行的进程
+
+docker ps
+
+容器重新命名
+
+docker rename 原容器名称 新容器名称
+
+举例: docker rename blissful_hoover solr</code></pre></div>
+                
+              </div>
+            
+            
+              <div class="reward-container">
+    
+    <span class="reward-button hvr-buzz-out">赏</span>
+    <div>您的鼓励，是我最大的动力</div>
+    <div class="reward-pay">
+      
+      <div style="margin: 10px">
+        <img src="/img/wechat.jpg" srcset="/img/loading.gif" lazyload alt="微信" class="wechat" />
+        <p>微信</p>
+      </div>
+      
+      <div style="margin: 10px">
+        <img src="/img/zhifubao.jpg" srcset="/img/loading.gif" lazyload alt="支付宝" class="zhifubao" />
+        <p>支付宝</p>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <script>
+    const rewardButtonDom = document.getElementsByClassName('reward-button')[0]
+    const rewardPayDom = document.getElementsByClassName('reward-pay')[0]
+    rewardButtonDom.addEventListener('mouseenter', function ()  {
+      rewardPayDom.style.display = 'flex'
+    })
+    rewardButtonDom.addEventListener('mouseleave', function ()  {
+      rewardPayDom.style.display = 'none'
+    })
+  </script>
+  
+                        
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BF%90%E7%BB%B4/" class="category-chain-item">运维</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%99%E7%A8%8B/">#教程</a>
+      
+        <a href="/tags/Docker/">#Docker</a>
+      
+        <a href="/tags/%E8%BF%90%E7%BB%B4/">#运维</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Docker使用手册</div>
+      <div>http://www.zibbo.xyz/king/7c29175f.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>King</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年7月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/king/30efca60.html" title="过自己想要的生活">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">过自己想要的生活</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"7oE653yNltVkmniTXN57Ko6V-gzGzoHsz","appKey":"bBq8ktn73l0qlxf3BsmGePpg","path":"window.location.pathname","placeholder":"留下你的脚印，在我的世界里","avatar":"mp","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://7oe653yn.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      <!--《添加网站运行时间 -->
+<br/>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+var now = new Date(); 
+
+function createtime() {
+    //此处修改你的建站时间或者网站上线时间
+    var grt = new Date('2020/08/30 09:00:00');
+    now.setTime(now.getTime() + 250);
+    days = (now - grt) / 1000 / 60 / 60 / 24;
+
+    dnum = Math.floor(days);
+    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+    }
+    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+    }
+    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+        snum = "0" + snum;
+    }
+    document.getElementById("timeDate").innerHTML = " 本站已安全运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+}
+setInterval("createtime()", 250);
+</script>
+
+<!-- 添加网站运行时间》-->
+
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP备2022008369号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/mouse.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

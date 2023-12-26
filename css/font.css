@@ -1,0 +1,114 @@
+html,
+body,
+.markdown-body,
+p {
+  font-family: "LXGW WenKai";
+}
+/* 归档页字体修改 */
+.archive .list-group p.h4,
+.tag .list-group p.h4,
+.category .list-group p.h4,
+.thesisReading .list-group p.h4,
+.civilEngineeringBody .list-group p.h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.archive .list-group p.h5,
+.tag .list-group p.h5,
+.category .list-group p.h5,
+.thesisReading .list-group p.h5,
+.civilEngineeringBody .list-group p.h5 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.archive .list-group .list-group-item,
+.tag .list-group .list-group-item,
+.category .list-group .list-group-item,
+.thesisReading .list-group .list-group-item,
+.civilEngineeringBody .list-group .list-group-item {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767px) and (min-width: 575px) {
+  .archive .list-group,
+  .tag .list-group,
+  .category .list-group,
+  .thesisReading .list-group,
+  .civilEngineeringBody .list-group {
+    margin-left: 2rem;
+  }
+}
+
+/* 手机端字体修改 */
+@media (max-width: 424px) {
+  .archive .list-group .list-group-item,
+  .tag .list-group .list-group-item,
+  .category .list-group .list-group-item,
+  .thesisReading .list-group .list-group-item,
+  .civilEngineeringBody .list-group .list-group-item {
+    font-size: 1rem;
+  }
+
+  .archive .list-group p.h4,
+  .tag .list-group p.h4,
+  .category .list-group p.h4,
+  .thesisReading .list-group p.h4,
+  .civilEngineeringBody .list-group p.h4 {
+    font-size: 1.6rem;
+  }
+
+  .archive .list-group p.h5,
+  .tag .list-group p.h5,
+  .category .list-group p.h5,
+  .thesisReading .list-group p.h5,
+  .civilEngineeringBody .list-group p.h5 {
+    font-size: 1.3rem;
+  }
+
+  .civilEngineeringBody .list-group-item time {
+    display: none;
+  }
+}
+/* 分类页字体修改 */
+.categories #board .category-post-list .list-group-item {
+  font-size: 1.1rem;
+}
+
+.categories #board .category-item,
+.categories #board .category-subitem {
+  font-size: 1.5rem;
+}
+
+.categories .category-count {
+  font-size: 1rem;
+}
+
+/* 手机端字体修改 */
+@media (max-width:424px) {
+
+  .categories #board .category-post-list .list-group-item {
+      font-size: 1rem;
+  }
+
+  .categories #board .category-item,
+  .categories #board .category-subitem {
+      font-size: 1.3rem;
+  }
+
+  .categories .category-count {
+      font-size: 0.9rem;
+  }
+}
+
+
+/*设置图片居中*/
+img.img-center {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+

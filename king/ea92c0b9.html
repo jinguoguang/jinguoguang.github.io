@@ -1,0 +1,1154 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" media="print" onload="this.media='all'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="King">
+  <meta name="keywords" content="King,博客,java,vue,nuxt,开发，博客系统，程序员，程序猿">
+  
+    <meta name="description" content="比较简单的单体项目部署方式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java项目部署">
+<meta property="og:url" content="http://www.zibbo.xyz/king/ea92c0b9.html">
+<meta property="og:site_name" content="一屋橘子香">
+<meta property="og:description" content="比较简单的单体项目部署方式">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img0.baidu.com/it/u=3705150710,3501402283&fm=253&fmt=auto&app=138&f=PNG?w=500&h=288">
+<meta property="article:published_time" content="2021-05-03T13:04:56.000Z">
+<meta property="article:modified_time" content="2023-08-29T06:13:48.000Z">
+<meta property="article:author" content="King">
+<meta property="article:tag" content="King,博客,java,vue,nuxt,开发，博客系统，程序员，程序猿">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img0.baidu.com/it/u=3705150710,3501402283&fm=253&fmt=auto&app=138&f=PNG?w=500&h=288">
+  
+  
+  
+    <meta name="baidu-site-verification" content="codeva-OJCLMIKcAp" />
+  
+  <title>Java项目部署 - 一屋橘子香</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/mac.css">
+<link rel="stylesheet" href="/css/font.css">
+<link rel="stylesheet" href="/css/hover-min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.zibbo.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="一屋橘子香" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>一屋橘子香</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                <span>订阅</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">Java项目部署</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-05-03 21:04" pubdate>
+          2021年5月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          75 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java项目部署</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="一、安装Nginx"><a href="#一、安装Nginx" class="headerlink" title="一、安装Nginx"></a>一、安装Nginx</h1><h2 id="一-Docker安装nginx"><a href="#一-Docker安装nginx" class="headerlink" title="(一)Docker安装nginx"></a>(一)Docker安装nginx</h2><h3 id="1-查看镜像版本"><a href="#1-查看镜像版本" class="headerlink" title="1.查看镜像版本"></a>1.查看镜像版本</h3><div class="code-wrapper"><pre><code class="hljs sh">docker  search nginx</code></pre></div>
+
+<h3 id="2-拉取镜像"><a href="#2-拉取镜像" class="headerlink" title="2.拉取镜像"></a>2.拉取镜像</h3><div class="code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker pull nginx</span></code></pre></div>
+
+<h3 id="3-查看镜像"><a href="#3-查看镜像" class="headerlink" title="3.查看镜像"></a>3.查看镜像</h3><div class="code-wrapper"><pre><code class="hljs 1c">docker images <span class="hljs-string">| grep nginx</span></code></pre></div>
+
+<h3 id="4-创建挂载目录"><a href="#4-创建挂载目录" class="headerlink" title="4.创建挂载目录"></a>4.创建挂载目录</h3><div class="code-wrapper"><pre><code class="hljs stata"><span class="hljs-keyword">mkdir</span> nginx
+<span class="hljs-keyword">cd</span> nginx
+<span class="hljs-keyword">mkdir</span> <span class="hljs-keyword">conf</span>
+<span class="hljs-keyword">mkdir</span> wwwroot
+<span class="hljs-keyword">mkdir</span> logs</code></pre></div>
+<div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-comment">#创建挂载目录</span>
+<span class="hljs-built_in">mkdir</span> -p ./nginx/&#123;conf,html,logs&#125;</code></pre></div>
+
+<h3 id="5-构建容器并启动"><a href="#5-构建容器并启动" class="headerlink" title="5.构建容器并启动"></a>5.构建容器并启动</h3><div class="code-wrapper"><pre><code class="hljs awk">docker run -d --name=nginx -p <span class="hljs-number">80</span>:<span class="hljs-number">80</span> \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/nginx/</span>wwwroot:<span class="hljs-regexp">/usr/</span>share<span class="hljs-regexp">/nginx/</span>html \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/nginx/</span>conf<span class="hljs-regexp">/nginx.conf:/</span>etc<span class="hljs-regexp">/nginx/</span>nginx.conf \
+-v <span class="hljs-regexp">/local/</span>docker<span class="hljs-regexp">/nginx/</span>logs:<span class="hljs-regexp">/var/</span>log/nginx \
+nginx</code></pre></div>
+
+<h2 id="（二）"><a href="#（二）" class="headerlink" title="（二）"></a>（二）</h2><h3 id="1-安装依赖包"><a href="#1-安装依赖包" class="headerlink" title="1.安装依赖包"></a>1.安装依赖包</h3><div class="code-wrapper"><pre><code class="hljs nsis">sudo yum -y install gcc <span class="hljs-literal">zlib</span> <span class="hljs-literal">zlib</span>-devel pcre-devel openssl openssl-devel</code></pre></div>
+
+<h3 id="2-下载并解压安装包"><a href="#2-下载并解压安装包" class="headerlink" title="2.下载并解压安装包"></a>2.下载并解压安装包</h3><div class="code-wrapper"><pre><code class="hljs awk">cd <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">//</span>下载tar包
+sudo wget  http:<span class="hljs-regexp">//</span>nginx.org<span class="hljs-regexp">/download/</span>nginx-<span class="hljs-number">1.21</span>.<span class="hljs-number">4</span>.tar.gz
+sudo tar -xvf nginx-<span class="hljs-number">1.21</span>.<span class="hljs-number">4</span>.tar.gz</code></pre></div>
+
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/gezp/p/14967445.html">https://www.cnblogs.com/gezp/p/14967445.html</a></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><div class="code-wrapper"><pre><code class="hljs awk"><span class="hljs-comment"># 检查配置文件</span>
+sudo <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/nginx/</span>sbin/nginx  -t
+<span class="hljs-comment">#启动</span>
+sudo <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/nginx/</span>sbin/nginx
+<span class="hljs-comment"># 重启加载配置</span>
+sudo <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/nginx/</span>sbin/nginx -s reload</code></pre></div>
+
+
+
+<h1 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h1><div class="code-wrapper"><pre><code class="hljs sh">user  nginx;
+worker_processes  1;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+
+events &#123;
+    worker_connections  1024;
+&#125;
+
+
+http &#123;
+
+	<span class="hljs-comment">#博客服务器，多个可以实现负载均衡</span>
+    upstream sob-blog&#123;
+	   server 172.23.152.88:8082 weight=1;
+    &#125;
+
+
+ 
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  <span class="hljs-string">&#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span>
+                      <span class="hljs-string">&#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span>
+                      <span class="hljs-string">&#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;</span>;
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    <span class="hljs-comment">#tcp_nopush     on;</span>
+
+    keepalive_timeout  65;
+
+    <span class="hljs-comment">#gzip  on;</span>
+
+   
+	server &#123;
+		listen       80;
+		server_name  localhost;
+
+		<span class="hljs-comment">#charset koi8-r;</span>
+		<span class="hljs-comment">#access_log  /var/log/nginx/host.access.log  main;</span>
+		
+		index index.html index.htm index.php;
+		<span class="hljs-comment">#用户相关的请求，转到sob-blog</span>
+		location ^~/user/ &#123;
+            	proxy_pass   http://sob-blog;
+			<span class="hljs-comment">#以下是一些反向代理的配置可删除</span>
+			proxy_redirect             off; 
+			<span class="hljs-comment">#后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+			proxy_set_header           Host <span class="hljs-variable">$host</span>;
+			proxy_set_header 		   Cookie <span class="hljs-variable">$http_cookie</span>;
+			proxy_set_header           X-Real-IP <span class="hljs-variable">$remote_addr</span>; 
+			proxy_set_header           X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+			proxy_set_header           HTTP_X_FORWARDED_FOR <span class="hljs-variable">$remote_addr</span>;
+			proxy_set_header           X-Forwarded-Server <span class="hljs-variable">$host</span>;
+        &#125;
+        
+		location ^~/admin/ &#123;
+           	proxy_pass   http://sob-blog;
+			<span class="hljs-comment">#以下是一些反向代理的配置可删除</span>
+			proxy_redirect             off; 
+			<span class="hljs-comment">#后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+			proxy_set_header           Host <span class="hljs-variable">$host</span>;
+			proxy_set_header 		   Cookie <span class="hljs-variable">$http_cookie</span>;
+			proxy_set_header           X-Real-IP <span class="hljs-variable">$remote_addr</span>; 
+			proxy_set_header           X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+			proxy_set_header           HTTP_X_FORWARDED_FOR <span class="hljs-variable">$remote_addr</span>;
+			proxy_set_header           X-Forwarded-Server <span class="hljs-variable">$host</span>;
+        &#125;
+        
+        location ^~/portal/ &#123;
+           	proxy_pass   http://sob-blog;
+			<span class="hljs-comment">#以下是一些反向代理的配置可删除</span>
+			proxy_redirect             off; 
+			<span class="hljs-comment">#后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+			proxy_set_header           Host <span class="hljs-variable">$host</span>;
+			proxy_set_header 		   Cookie <span class="hljs-variable">$http_cookie</span>;
+			proxy_set_header           X-Real-IP <span class="hljs-variable">$remote_addr</span>; 
+			proxy_set_header           X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+			proxy_set_header           HTTP_X_FORWARDED_FOR <span class="hljs-variable">$remote_addr</span>;
+			proxy_set_header           X-Forwarded-Server <span class="hljs-variable">$host</span>;
+        &#125;
+
+		<span class="hljs-comment">#其他访问访问根目录wwwroot</span>
+		location / &#123;
+		    root   /usr/share/nginx/html;
+		    index  index.html index.htm;
+		    <span class="hljs-comment">#此处解决刷新页面出现404的问题</span>
+		    try_files <span class="hljs-variable">$uri</span> <span class="hljs-variable">$uri</span>/ /index.html;
+        &#125;
+		
+	&#125;
+&#125;
+</code></pre></div>
+
+
+
+<div class="code-wrapper"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">user  nobody;</span>
+<span class="hljs-meta prompt_"> </span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">==工作进程数，一般设置为cpu核心数</span>
+worker_processes  1;
+<span class="hljs-meta prompt_"> </span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">error_log  logs/error.log;</span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">error_log  logs/error.log  notice;</span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">error_log  logs/error.log  info;</span>
+<span class="hljs-meta prompt_"> </span>
+<span class="hljs-meta prompt_">#</span><span class="language-bash">pid        logs/nginx.pid;</span>
+ 
+ 
+events &#123;
+ 
+    #==最大连接数，一般设置为cpu*2048
+    worker_connections  1024;
+&#125;
+ 
+ 
+http &#123;
+
+    # 负载均衡配置
+    upstream web_servers &#123;
+    server localhost:8082;
+    &#125;
+
+    include       mime.types;
+    default_type  application/octet-stream;
+ 
+    #log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;
+    #                  &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;
+    #                  &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;
+ 
+    #access_log  logs/access.log  main;
+ 
+    sendfile        on;
+    #tcp_nopush     on;
+ 
+    #keepalive_timeout  0;
+    
+    #==客户端链接超时时间
+    keepalive_timeout  65;
+ 
+    #gzip  on;
+ 
+    #当配置多个server节点时，默认server names的缓存区大小就不够了，需要手动设置大一点
+    server_names_hash_bucket_size 512;
+ 
+    #server表示虚拟主机可以理解为一个站点，可以配置多个server节点搭建多个站点
+    #每一个请求进来确定使用哪个server由server_name确定
+    server &#123;
+        #站点监听端口
+        listen       80;
+        #站点访问域名
+        server_name  localhost;
+        
+        #编码格式，避免url参数乱码
+        charset utf-8;
+ 
+        #access_log  logs/host.access.log  main;
+ 
+        #location用来匹配同一域名下多个URI的访问规则
+        #比如动态资源如何跳转，静态资源如何跳转等
+        #location后面跟着的/代表匹配规则
+        location / &#123;
+            #站点根目录，可以是相对路径，也可以使绝对路径
+            root   html;
+            #默认主页
+            index  index.html index.htm;
+            
+            #转发后端站点地址，一般用于做软负载，轮询后端服务器
+            #proxy_pass http://ip:端口;
+ 
+            #拒绝请求，返回403，一般用于某些目录禁止访问
+            #deny all;
+            
+            #允许请求
+            #allow all;
+            
+            add_header &#x27;Access-Control-Allow-Origin&#x27; &#x27;*&#x27;;
+            add_header &#x27;Access-Control-Allow-Credentials&#x27; &#x27;true&#x27;;
+            add_header &#x27;Access-Control-Allow-Methods&#x27; &#x27;GET, POST, OPTIONS&#x27;;
+            add_header &#x27;Access-Control-Allow-Headers&#x27; &#x27;DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type&#x27;;
+            #重新定义或者添加发往后端服务器的请求头
+            #给请求头中添加客户请求主机名
+            proxy_set_header Host $host;
+            #给请求头中添加客户端IP
+            proxy_set_header X-Real-IP $remote_addr;
+            #将$remote_addr变量值添加在客户端“X-Forwarded-For”请求头的后面，并以逗号分隔。 如果客户端请求未携带“X-Forwarded-For”请求头，$proxy_add_x_forwarded_for变量值将与$remote_addr变量相同  
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            #给请求头中添加客户端的Cookie
+            proxy_set_header Cookie $http_cookie;
+            #将使用代理服务器的主域名和端口号来替换。如果端口是80，可以不加。
+            proxy_redirect off;
+            
+            #浏览器对 Cookie 有很多限制，如果 Cookie 的 Domain 部分与当前页面的 Domain 不匹配就无法写入。
+            #所以如果请求 A 域名，服务器 proxy_pass 到 B 域名，然后 B 服务器输出 Domian=B 的 Cookie，
+            #前端的页面依然停留在 A 域名上，于是浏览器就无法将 Cookie 写入。
+            
+　　         #不仅是域名，浏览器对 Path 也有限制。我们经常会 proxy_pass 到目标服务器的某个 Path 下，
+            #不把这个 Path 暴露给浏览器。这时候如果目标服务器的 Cookie 写死了 Path 也会出现 Cookie 无法写入的问题。
+            
+            #设置“Set-Cookie”响应头中的domain属性的替换文本，其值可以为一个字符串、正则表达式的模式或一个引用的变量
+            #转发后端服务器如果需要Cookie则需要将cookie domain也进行转换，否则前端域名与后端域名不一致cookie就会无法存取
+　　　　　　  #配置规则：proxy_cookie_domain serverDomain(后端服务器域) nginxDomain(nginx服务器域)
+            proxy_cookie_domain localhost .testcaigou800.com;
+            
+            #取消当前配置级别的所有proxy_cookie_domain指令
+            #proxy_cookie_domain off;
+            #与后端服务器建立连接的超时时间。一般不可能大于75秒；
+            proxy_connect_timeout 30;
+        &#125;
+
+        #用户相关的请求，转到sob-blog
+		location ^~/user/ &#123;
+            proxy_pass   http://web_servers;
+<span class="hljs-meta prompt_">			#</span><span class="language-bash">以下是一些反向代理的配置可删除</span>
+			proxy_redirect             off; 
+<span class="hljs-meta prompt_">			#</span><span class="language-bash">后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+			proxy_set_header           Host $host;
+			proxy_set_header 		   Cookie $http_cookie;
+			proxy_set_header           X-Real-IP $remote_addr; 
+			proxy_set_header           X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header           HTTP_X_FORWARDED_FOR $remote_addr;
+			proxy_set_header           X-Forwarded-Server $host;
+        &#125;
+        
+		location ^~/admin/ &#123;
+           	 proxy_pass   http://web_servers;
+<span class="hljs-meta prompt_">			#</span><span class="language-bash">以下是一些反向代理的配置可删除</span>
+			proxy_redirect             off; 
+<span class="hljs-meta prompt_">			#</span><span class="language-bash">后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+			proxy_set_header           Host $host;
+			proxy_set_header 		   Cookie $http_cookie;
+			proxy_set_header           X-Real-IP $remote_addr; 
+			proxy_set_header           X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header           HTTP_X_FORWARDED_FOR $remote_addr;
+			proxy_set_header           X-Forwarded-Server $host;
+        &#125;
+        
+        location ^~/portal/ &#123;
+           	proxy_pass   http://web_servers;
+<span class="hljs-meta prompt_">			#</span><span class="language-bash">以下是一些反向代理的配置可删除</span>
+			proxy_redirect             off; 
+<span class="hljs-meta prompt_">			#</span><span class="language-bash">后端的Web服务器可以通过X-Forwarded-For获取用户真实IP</span>
+			proxy_set_header           Host $host;
+			proxy_set_header 		   Cookie $http_cookie;
+			proxy_set_header           X-Real-IP $remote_addr; 
+			proxy_set_header           X-Forwarded-For $proxy_add_x_forwarded_for;
+			proxy_set_header           HTTP_X_FORWARDED_FOR $remote_addr;
+			proxy_set_header           X-Forwarded-Server $host;
+        &#125;
+ 
+        #error_page  404              /404.html;
+ 
+        # redirect server error pages to the static page /50x.html
+        #
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html &#123;
+            root   html;
+        &#125;
+ 
+    &#125;</code></pre></div>
+<h1 id="linux服务器上jar包启动及关闭方式"><a href="#linux服务器上jar包启动及关闭方式" class="headerlink" title="linux服务器上jar包启动及关闭方式"></a>linux服务器上jar包启动及关闭方式</h1><h2 id="1、直接启动"><a href="#1、直接启动" class="headerlink" title="1、直接启动"></a>1、直接启动</h2><div class="code-wrapper"><pre><code class="hljs shell">java -jar chapter.jar</code></pre></div>
+<blockquote>
+<p>这种启动方式有个缺点：启动好了之后就不能动了，不能ctrl+c退出，也不能关闭终端，一旦退出或者关闭终端，程序就会关闭。</p>
+</blockquote>
+<h2 id="2-后台启动"><a href="#2-后台启动" class="headerlink" title="2.后台启动"></a>2.后台启动</h2><div class="code-wrapper"><pre><code class="hljs shell">java -jar chapter.jar &amp;</code></pre></div>
+<blockquote>
+<p>&amp;符号就代表后台启动，这种启动方式日志仍然输入到终端控制台中，但是ctrl+c不会关闭程序，退出终端，程序会关闭</p>
+</blockquote>
+<h2 id="3-nohup启动"><a href="#3-nohup启动" class="headerlink" title="3.nohup启动"></a>3.nohup启动</h2><div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">nohup</span> java -jar chapter.jar &amp;</code></pre></div>
+<blockquote>
+<p>这种方式会生成一个nohup.out来记录日志，所以日志不会直接输出到终端，而且这种方式启动，ctrl+c或者关闭终端，程序都不会结束</p>
+</blockquote>
+<h2 id="4、指定日志文件"><a href="#4、指定日志文件" class="headerlink" title="4、指定日志文件"></a>4、指定日志文件</h2><p>nohup启动的日志输出文件nohup.out是自动生成的，但是我们更希望自己指定日志输出文件，用以下命令：</p>
+<div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">nohup</span> java -jar chapter.jar &gt; logs.log &amp;</code></pre></div>
+<blockquote>
+<p>此命令会将日志重定向到当前的logs.log文件中，但是只会输出标准输出。这种方式启动，ctrl+c或者关闭终端，程序都不会结束</p>
+</blockquote>
+<h2 id="5、重定向错误输出（推荐）"><a href="#5、重定向错误输出（推荐）" class="headerlink" title="5、重定向错误输出（推荐）"></a>5、重定向错误输出（推荐）</h2><div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">nohup</span> java -jar chapter.jar &gt; logs.log 2&gt;&amp;1 &amp;</code></pre></div>
+<blockquote>
+<p>这条命令不懂的可以去了解一下shell脚本，我简单解释一下：<br> Linux下1表示标准输出，2表示错误输出<br>“&gt;logs.log”表示标准输出重定向到logs.log中，默认是标准输出，省略1,不省略的话可以写成1&gt;logs.log;<br>“2&gt;&amp;1”表示错误输出也重定向到logs.log中，其中&amp;1表示前面的logs.log文件，不加&amp;，写成2&gt;1的话就表示把错误输出到1这个文件而不是前面标准输出的文件logs.log，所以&amp;要加上；<br>最后一个&amp;表示以后台方式启动程序。<br>这种方式启动，ctrl+c或者关闭终端，程序都不会结束。</p>
+</blockquote>
+<h2 id="6、以系统服务启动（更推荐）"><a href="#6、以系统服务启动（更推荐）" class="headerlink" title="6、以系统服务启动（更推荐）"></a>6、以系统服务启动（更推荐）</h2><p>​     以系统服务启动，实际上就是自己注册一个系统服务，然后系统服务的功能就是启动此jar包，所以我们就可以通过启动自定义系统服务控制jar包的启动了，这种方式有很多好处，最显而易见的就是系统服务的启动、停止、查看状态、开机自启动等命令能直接管理到jar包进程。</p>
+<ol>
+<li>创建自定义系统服务(只介绍CentOS7下的方式)<br>在/etc/systemd/system目录下创建一个xxx.service文件，xxx就是自定义的服务名称。<br>在文件中写入以下内容：</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs sh">[Unit]
+
+Description=chapter
+
+After=syslog.target
+
+[Service]
+
+ExecStart=/usr/software/jdk1.8.0_221/bin/java -jar /usr/programme/serviceJarTest/chapter.jar
+
+[Install]
+
+WantedBy=multi-user.target
+</code></pre></div>
+
+<blockquote>
+<p>内容解释：<br>[Unit]说明<br>Description:服务的描述<br>After:设置在某个服务启动后启动</p>
+<p>[Service]服务参数配置<br>ExecStart服务运行执行的命令</p>
+<p>[Install]服务安装的相关设置，可设置为多用户</p>
+<p>根据需要，自己修改description和ExecStart的内容即可（ExecStart后面的java命令需要全路径，写java -jar 会启动不了）</p>
+</blockquote>
+<p>​    2. 启动系统服务</p>
+<div class="code-wrapper"><pre><code class="hljs sh">systemctl start 服务名</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs nsis"><span class="hljs-params">system</span>ctl start xxx  <span class="hljs-comment">#启动服务</span>
+<span class="hljs-params">system</span>ctl status xxx  <span class="hljs-comment">#查看服务状态</span>
+<span class="hljs-params">system</span>ctl stop xxx  <span class="hljs-comment">#停止服务</span>
+<span class="hljs-params">system</span>ctl enable xxx  <span class="hljs-comment">#设置服务开机自启动</span>
+<span class="hljs-params">system</span>ctl disable xxx  <span class="hljs-comment">#取消服务开机自启动</span>
+<span class="hljs-params">system</span>ctl restart xxx  <span class="hljs-comment">#重启服务</span></code></pre></div>
+
+<h2 id="7、关闭jar包程序"><a href="#7、关闭jar包程序" class="headerlink" title="7、关闭jar包程序"></a>7、关闭jar包程序</h2><ul>
+<li>如果是第一种方式启动，ctrl+c就可以直接关闭</li>
+</ul>
+<ul>
+<li>如果是第二种方式启动，关闭终端就可以关闭程序</li>
+</ul>
+<ul>
+<li>如果是第三四五种方式启动，可以用kill进程的方式结束进程：<br>查看java进程：</li>
+</ul>
+<div class="code-wrapper"><pre><code class="hljs sh">ps -ef | grep java
+<span class="hljs-comment">#或者</span>
+ ps -ef|grep Blog-0.0.1-SNAPSHOT.jar
+</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs sh">//关闭进程
+<span class="hljs-comment">#24204为查询出来的进程号</span>
+<span class="hljs-built_in">kill</span> -s 9 24204</code></pre></div>
+
+<h1 id="8-启动"><a href="#8-启动" class="headerlink" title="8.启动"></a>8.启动</h1><div class="code-wrapper"><pre><code class="hljs sh"><span class="hljs-built_in">nohup</span> java -Djasypt.encryptor.password=578bee5369c35ad48751dd979ea4681e -Xms512m -Xmx512m -XX:MaxMetaspaceSize=128m  -XX:MaxNewSize=256m -jar  Blog-0.0.1-SNAPSHOT.jar  &gt; logs.log 2&gt;&amp;1 &amp;</code></pre></div>
+<p>知识点:<br>JDK8之后把-XX:PermSize 和-XX:MaxPermGen移除了，取而代之的是</p>
+<div class="code-wrapper"><pre><code class="hljs sh">-XX:MetaspaceSize=128m （元空间默认大小）
+-XX:MaxMetaspaceSize=128m （元空间最大大小）</code></pre></div>
+<p>参数介绍:<br>-XX:MetaspaceSize=128m （元空间默认大小）<br>-XX:MaxMetaspaceSize=128m （元空间最大大小）<br>-Xms1024m （堆最大大小）<br>-Xmx1024m （堆默认大小）<br>-Xmn256m （新生代大小）<br>-Xss256k （棧最大深度大小）<br>-XX:SurvivorRatio=8 （新生代分区比例 8:2）<br>-XX:+UseConcMarkSweepGC （指定使用的垃圾收集器，这里使用CMS收集器）<br>-XX:+PrintGCDetails （打印详细的GC日志）</p>
+
+                
+              </div>
+            
+            
+              <div class="reward-container">
+    
+    <span class="reward-button hvr-buzz-out">赏</span>
+    <div>您的鼓励，是我最大的动力</div>
+    <div class="reward-pay">
+      
+      <div style="margin: 10px">
+        <img src="/img/wechat.jpg" srcset="/img/loading.gif" lazyload alt="微信" class="wechat" />
+        <p>微信</p>
+      </div>
+      
+      <div style="margin: 10px">
+        <img src="/img/zhifubao.jpg" srcset="/img/loading.gif" lazyload alt="支付宝" class="zhifubao" />
+        <p>支付宝</p>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <script>
+    const rewardButtonDom = document.getElementsByClassName('reward-button')[0]
+    const rewardPayDom = document.getElementsByClassName('reward-pay')[0]
+    rewardButtonDom.addEventListener('mouseenter', function ()  {
+      rewardPayDom.style.display = 'flex'
+    })
+    rewardButtonDom.addEventListener('mouseleave', function ()  {
+      rewardPayDom.style.display = 'none'
+    })
+  </script>
+  
+                        
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%BF%90%E7%BB%B4/" class="category-chain-item">运维</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Java项目部署</div>
+      <div>http://www.zibbo.xyz/king/ea92c0b9.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>King</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年5月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/king/26960e5d.html" title="vuepress搭建个人博客教程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">vuepress搭建个人博客教程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/king/dc7a1e70.html" title="无所事事的自己">
+                        <span class="hidden-mobile">无所事事的自己</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"7oE653yNltVkmniTXN57Ko6V-gzGzoHsz","appKey":"bBq8ktn73l0qlxf3BsmGePpg","path":"window.location.pathname","placeholder":"留下你的脚印，在我的世界里","avatar":"mp","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://7oe653yn.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      <!--《添加网站运行时间 -->
+<br/>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+var now = new Date(); 
+
+function createtime() {
+    //此处修改你的建站时间或者网站上线时间
+    var grt = new Date('2020/08/30 09:00:00');
+    now.setTime(now.getTime() + 250);
+    days = (now - grt) / 1000 / 60 / 60 / 24;
+
+    dnum = Math.floor(days);
+    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+    }
+    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+    }
+    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+        snum = "0" + snum;
+    }
+    document.getElementById("timeDate").innerHTML = " 本站已安全运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+}
+setInterval("createtime()", 250);
+</script>
+
+<!-- 添加网站运行时间》-->
+
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP备2022008369号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/mouse.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

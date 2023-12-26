@@ -1,0 +1,1188 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.ico">
+  <link rel="icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" media="print" onload="this.media='all'">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="King">
+  <meta name="keywords" content="King,博客,java,vue,nuxt,开发，博客系统，程序员，程序猿">
+  
+    <meta name="description" content="VuePress 由两部分组成：第一部分是一个极简静态网站生成器 (opens new window)，它包含由 Vue 驱动的主题系统和插件 API，另一个部分是为书写技术文档而优化的默认主题，它的诞生初衷是为了支持 Vue 及其子项目的文档需求。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vuepress搭建个人博客教程">
+<meta property="og:url" content="http://www.zibbo.xyz/king/26960e5d.html">
+<meta property="og:site_name" content="一屋橘子香">
+<meta property="og:description" content="VuePress 由两部分组成：第一部分是一个极简静态网站生成器 (opens new window)，它包含由 Vue 驱动的主题系统和插件 API，另一个部分是为书写技术文档而优化的默认主题，它的诞生初衷是为了支持 Vue 及其子项目的文档需求。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img1.baidu.com/it/u=2891324737,2702977437&fm=253&fmt=auto&app=138&f=JPEG?w=1000&h=500">
+<meta property="article:published_time" content="2022-01-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-29T06:13:48.000Z">
+<meta property="article:author" content="King">
+<meta property="article:tag" content="博客">
+<meta property="article:tag" content="vuepress">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img1.baidu.com/it/u=2891324737,2702977437&fm=253&fmt=auto&app=138&f=JPEG?w=1000&h=500">
+  
+  
+  
+    <meta name="baidu-site-verification" content="codeva-OJCLMIKcAp" />
+  
+  <title>vuepress搭建个人博客教程 - 一屋橘子香</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/mac.css">
+<link rel="stylesheet" href="/css/font.css">
+<link rel="stylesheet" href="/css/hover-min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.zibbo.xyz","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="一屋橘子香" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>一屋橘子香</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                <span>订阅</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://zibbo-blog.oss-cn-beijing.aliyuncs.com/blog/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">vuepress搭建个人博客教程</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-02-01 00:00" pubdate>
+          2022年2月1日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          96 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">vuepress搭建个人博客教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <!-- more -->
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><div class="code-wrapper"><pre><code class="hljs sh">npm install vuepress-theme-reco --save-dev
+
+<span class="hljs-comment"># or</span>
+
+yarn add vuepress-theme-reco</code></pre></div>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><div class="code-wrapper"><pre><code class="hljs sh">// .vuepress/config.js
+
+module.exports = &#123;
+  theme: <span class="hljs-string">&#x27;reco&#x27;</span>
+&#125;</code></pre></div>
+<h2 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h2><ul>
+<li>下载<br>在<a target="_blank" rel="noopener" href="https://github.com/vuepress-reco/vuepress-theme-reco%E4%BB%93%E5%BA%93%E4%B8%AD%E4%B8%8B%E8%BD%BD%E5%85%A8%E9%83%A8%E6%96%87%E4%BB%B6">https://github.com/vuepress-reco/vuepress-theme-reco仓库中下载全部文件</a></li>
+<li>使用<br>在.vuepress文件夹下新建theme文件夹，再将packages文件夹下的vuepress-theme-reco文件夹放入theme;<br>修改.vuepress文件夹下config.js<div class="code-wrapper"><pre><code class="hljs livecodeserver"><span class="hljs-string">&quot;theme&quot;</span>: <span class="hljs-built_in">require</span>.<span class="hljs-built_in">resolve</span>(<span class="hljs-string">&quot;./theme/vuepress-theme-reco&quot;</span>),</code></pre></div></li>
+</ul>
+<h2 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front Matter"></a>Front Matter</h2><div class="code-wrapper"><pre><code class="hljs sh">---
+title: 烤鸭的做法
+<span class="hljs-built_in">date</span>: <span class="hljs-string">&#x27;2019-08-08 08:00:00&#x27;</span>
+sidebar: <span class="hljs-string">&#x27;auto&#x27;</span>
+categories:
+ - 烹饪
+ - 爱好
+tags:
+ - 烤
+ - 鸭子
+keys:
+ - <span class="hljs-string">&#x27;123456&#x27;</span>
+publish: <span class="hljs-literal">false</span>
+---</code></pre></div>
+<p>:::tip<br>Front Matter配置</p>
+<p>title: 文章标题 date: 时间，如(‘2019-08-08 08:00:00’) sidebar: ‘auto’ categories:文章分类，可以有多个</p>
+<p>tags:文章标签,可以有多个</p>
+<p>keys：文章加密密码</p>
+<p>sticky :是否置顶，sort type: 降序，可以按照 1, 2, 3, … 来降低置顶文章的排列优先级</p>
+<p>public:是否发布<br>:::</p>
+<h2 id="优化页面"><a href="#优化页面" class="headerlink" title="优化页面"></a>优化页面</h2><p>1.首页背景全屏显示 修改首页的README.md文件</p>
+<div class="code-wrapper"><pre><code class="hljs css">bgImageStyle: &#123;
+  <span class="hljs-attribute">height</span>: <span class="hljs-string">&#x27;95vh&#x27;</span>,
+  background-color: <span class="hljs-string">&#x27;#D9AFD9&#x27;</span>,
+  background-image: <span class="hljs-string">&#x27;linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%)&#x27;</span>
+&#125;</code></pre></div>
+<p>2.添加鼠标点击特效 修改.vuepress/config.js中的head，如下所示:</p>
+<div class="code-wrapper"><pre><code class="hljs javascript">[
+    <span class="hljs-string">&quot;script&quot;</span>,
+    &#123;
+      <span class="hljs-string">&quot;src&quot;</span>: <span class="hljs-string">&quot;https://cdn.jsdelivr.net/gh/forthespada/forthespada.github.io@master/plugin/click_heart.js&quot;</span>
+    &#125;
+  ]</code></pre></div>
+<p>3.首页添加向下滑动按钮 在主页的README.md文件最下面添加下列代码（此方法转载自<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41327483/article/details/119103300%E3%80%82%EF%BC%89">https://blog.csdn.net/qq_41327483/article/details/119103300。）</a></p>
+<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"></span>
+<span class="language-css"><span class="hljs-selector-class">.anchor-down</span> &#123;</span>
+<span class="language-css">  <span class="hljs-attribute">display</span>: block;</span>
+<span class="language-css">  <span class="hljs-attribute">margin</span>: <span class="hljs-number">12rem</span> auto <span class="hljs-number">0</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">45px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">34px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">text-align</span>: center;</span>
+<span class="language-css">  <span class="hljs-attribute">animation</span>: bounce-in <span class="hljs-number">5s</span> <span class="hljs-number">3s</span> infinite;</span>
+<span class="language-css">  <span class="hljs-attribute">position</span>: absolute;</span>
+<span class="language-css">  <span class="hljs-attribute">left</span>: <span class="hljs-number">50%</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">30%</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">10px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">cursor</span>: pointer;</span>
+<span class="language-css">&#125;</span>
+<span class="language-css"><span class="hljs-keyword">@-webkit-keyframes</span> bounce-in&#123;</span>
+<span class="language-css">  <span class="hljs-number">0%</span>&#123;<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(<span class="hljs-number">0</span>)&#125;</span>
+<span class="language-css">  <span class="hljs-number">20%</span>&#123;<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(<span class="hljs-number">0</span>)&#125;</span>
+<span class="language-css">  <span class="hljs-number">50%</span>&#123;<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(-<span class="hljs-number">20px</span>)&#125;</span>
+<span class="language-css">  <span class="hljs-number">80%</span>&#123;<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(<span class="hljs-number">0</span>)&#125;</span>
+<span class="language-css">  <span class="hljs-selector-tag">to</span>&#123;<span class="hljs-attribute">transform</span>:<span class="hljs-built_in">translateY</span>(<span class="hljs-number">0</span>)&#125;</span>
+<span class="language-css">&#125;</span>
+<span class="language-css"><span class="hljs-selector-class">.anchor-down</span><span class="hljs-selector-pseudo">::before</span> &#123;</span>
+<span class="language-css">  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">display</span>: block;</span>
+<span class="language-css">  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#fff</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#fff</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);</span>
+<span class="language-css">  <span class="hljs-attribute">position</span>: absolute;</span>
+<span class="language-css">  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">10px</span>;</span>
+<span class="language-css">&#125;</span>
+<span class="language-css"><span class="hljs-selector-class">.anchor-down</span><span class="hljs-selector-pseudo">::after</span> &#123;</span>
+<span class="language-css">  <span class="hljs-attribute">content</span>: <span class="hljs-string">&quot;&quot;</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">height</span>: <span class="hljs-number">20px</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">display</span>: block;</span>
+<span class="language-css">  <span class="hljs-attribute">border-right</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#fff</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">3px</span> solid <span class="hljs-number">#fff</span>;</span>
+<span class="language-css">  <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">135deg</span>);</span>
+<span class="language-css">&#125;</span>
+<span class="language-css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span>
+<span class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;</span>
+<span class="language-javascript">  mounted () &#123;</span>
+<span class="language-javascript">    <span class="hljs-keyword">const</span> ifJanchor = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;JanchorDown&quot;</span>); </span>
+<span class="language-javascript">    ifJanchor &amp;&amp; ifJanchor.<span class="hljs-property">parentNode</span>.<span class="hljs-title function_">removeChild</span>(ifJanchor);</span>
+<span class="language-javascript">    <span class="hljs-keyword">let</span> a = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&#x27;a&#x27;</span>);</span>
+<span class="language-javascript">    a.<span class="hljs-property">id</span> = <span class="hljs-string">&#x27;JanchorDown&#x27;</span>;</span>
+<span class="language-javascript">    a.<span class="hljs-property">className</span> = <span class="hljs-string">&#x27;anchor-down&#x27;</span>;</span>
+<span class="language-javascript">    <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByClassName</span>(<span class="hljs-string">&#x27;hero&#x27;</span>)[<span class="hljs-number">0</span>].<span class="hljs-title function_">append</span>(a);</span>
+<span class="language-javascript">    <span class="hljs-keyword">let</span> targetA = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;JanchorDown&quot;</span>);</span>
+<span class="language-javascript">    targetA.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;click&#x27;</span>, <span class="hljs-function"><span class="hljs-params">e</span> =&gt;</span> &#123; <span class="hljs-comment">// 添加点击事件</span></span>
+<span class="language-javascript">      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">scrollFn</span>();</span>
+<span class="language-javascript">    &#125;)</span>
+<span class="language-javascript">  &#125;,</span>
+<span class="language-javascript"></span>
+<span class="language-javascript">  <span class="hljs-attr">methods</span>: &#123;</span>
+<span class="language-javascript">    <span class="hljs-title function_">scrollFn</span>(<span class="hljs-params"></span>) &#123;</span>
+<span class="language-javascript">      <span class="hljs-keyword">const</span> windowH = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementsByClassName</span>(<span class="hljs-string">&#x27;hero&#x27;</span>)[<span class="hljs-number">0</span>].<span class="hljs-property">clientHeight</span>; <span class="hljs-comment">// 获取窗口高度</span></span>
+<span class="language-javascript">      <span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>.<span class="hljs-property">scrollTop</span> = windowH; <span class="hljs-comment">// 滚动条滚动到指定位置</span></span>
+<span class="language-javascript">    &#125;</span>
+<span class="language-javascript">  &#125;</span>
+<span class="language-javascript">&#125;</span>
+<span class="language-javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+<p>4.首页气泡</p>
+<ul>
+<li>添加依赖<div class="code-wrapper"><pre><code class="hljs sh">npm install vue-canvas-effect -D</code></pre></div></li>
+<li>修改theme/vuepress-theme-reco/components/HomeBlog/index.vue<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 首页气泡 (在27行添加如下代码)--&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">component</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;bubbles&quot;</span></span>
+<span class="hljs-tag">             <span class="hljs-attr">:is</span>=<span class="hljs-string">&quot;bubbles&quot;</span></span>
+<span class="hljs-tag">             <span class="hljs-attr">:options</span>=<span class="hljs-string">&quot;options&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">component</span>&gt;</span></code></pre></div></li>
+<li>添加data<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">//首页气泡</span>
+    <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;
+        <span class="hljs-keyword">return</span> &#123;
+            <span class="hljs-attr">recoShow</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">currentPage</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-attr">tags</span>: [],
+            <span class="hljs-attr">bubbles</span>: <span class="hljs-literal">null</span>
+        &#125;
+    &#125;,</code></pre></div></li>
+<li>添加mounted<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-title function_">mounted</span>(<span class="hljs-params"></span>) &#123;
+       <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;vue-canvas-effect/src/components/bubbles&#x27;</span>).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">module</span> =&gt;</span> &#123;
+           <span class="hljs-variable language_">this</span>.<span class="hljs-property">bubbles</span> = <span class="hljs-variable language_">module</span>.<span class="hljs-property">default</span>
+       &#125;)
+       <span class="hljs-variable language_">this</span>.<span class="hljs-property">recoShow</span> = <span class="hljs-literal">true</span>
+       <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_setPage</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">_getStoragePage</span>())
+   &#125;,</code></pre></div></li>
+</ul>
+<p>5.修改置顶的样式</p>
+<ul>
+<li>修改./vuepress/theme/vuepress-theme-reco/NoteAbstractItem.vue<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;item.frontmatter.sticky&quot;</span></span>
+<span class="hljs-tag">              <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;settop&quot;</span>&gt;</span>置顶
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">reco-icon</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;item.frontmatter.keys&quot;</span></span>
+<span class="hljs-tag">                       <span class="hljs-attr">icon</span>=<span class="hljs-string">&quot;reco-lock&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">:to</span>=<span class="hljs-string">&quot;item.path&quot;</span>&gt;</span>&#123;&#123;item.title&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div></li>
+<li>添加css样式<div class="code-wrapper"><pre><code class="hljs css"><span class="hljs-selector-class">.settop</span> &#123;
+        <span class="hljs-attribute">position</span>: absolute;
+        <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background</span>: $accentColor;
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.6rem</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateZ</span>(<span class="hljs-number">45deg</span>) <span class="hljs-built_in">translateY</span>(-<span class="hljs-number">55px</span>);
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">50px</span> <span class="hljs-number">25px</span> <span class="hljs-number">3px</span>;
+    &#125;</code></pre></div></li>
+</ul>
+<p>6.修改文章列表title的鼠标hover样式</p>
+<ul>
+<li>修改./vuepress/theme/vuepress-theme-reco/NoteAbstractItem.vue<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- 添加class name 为 hover-underline-animation--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title hover-underline-animation&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">reco-icon</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;item.frontmatter.keys&quot;</span></span>
+<span class="hljs-tag">                       <span class="hljs-attr">icon</span>=<span class="hljs-string">&quot;reco-lock&quot;</span> /&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">router-link</span> <span class="hljs-attr">:to</span>=<span class="hljs-string">&quot;item.path&quot;</span>&gt;</span>&#123;&#123;item.title&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">router-link</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div></li>
+<li>添加css样式<div class="code-wrapper"><pre><code class="hljs css"><span class="hljs-selector-class">.hover-underline-animation</span> &#123;
+    <span class="hljs-attribute">display</span>: inline-block;
+    <span class="hljs-attribute">position</span>: relative;
+    <span class="hljs-attribute">color</span>: $accentColor;
+&#125;
+
+<span class="hljs-selector-class">.hover-underline-animation</span><span class="hljs-selector-pseudo">:after</span> &#123;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
+    <span class="hljs-attribute">position</span>: absolute;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scaleX</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">2px</span>;
+    <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">background-color</span>: $accentColor;
+    <span class="hljs-attribute">transform-origin</span>: bottom right;
+    <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.25s</span> ease-out;
+&#125;
+
+<span class="hljs-selector-class">.hover-underline-animation</span><span class="hljs-selector-pseudo">:hover</span><span class="hljs-selector-pseudo">:after</span> &#123;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scaleX</span>(<span class="hljs-number">1</span>);
+    <span class="hljs-attribute">transform-origin</span>: bottom left;
+&#125;</code></pre></div></li>
+</ul>
+<p>7.首页添加每日诗词<br>:::tip<br>今日诗词 API 是一个可以返回一句古诗词名句的接口。它可以通过图片和 JSON 格式调用。今日诗词 API 根据不同地点、时间、节日、季节、天气、景观、城市进行智能推荐。<br>:::</p>
+<ul>
+<li>官方文档地址<br><a target="_blank" rel="noopener" href="https://www.jinrishici.com/doc/">https://www.jinrishici.com/doc/</a></li>
+<li>修改.vuepress/theme/vuepress-theme-reco/components/HomeBlog/index.vue文件<div class="code-wrapper"><pre><code class="hljs html"> <span class="hljs-tag">&lt;<span class="hljs-name">ModuleTransition</span> <span class="hljs-attr">delay</span>=<span class="hljs-string">&quot;0.08&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;recoShowModule &amp;&amp; $frontmatter.tagline !== null&quot;</span></span>
+<span class="hljs-tag">                       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;description&quot;</span>&gt;</span>
+                        &#123;&#123; $frontmatter.tagline || $description || &#x27;Welcome to your vuePress-theme-reco site&#x27; &#125;&#125;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ModuleTransition</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- 加入如下代码即可 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ModuleTransition</span> <span class="hljs-attr">delay</span>=<span class="hljs-string">&quot;0.12&quot;</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- marquee文字滚动标签</span>
+<span class="hljs-comment">        marquee 参数：</span>
+<span class="hljs-comment">                    BGColor：滚动文本框的背景颜色。</span>
+<span class="hljs-comment">                    direction：滚动方向设置.</span>
+<span class="hljs-comment">                        left - 从右向左。默认值。</span>
+<span class="hljs-comment">                        right - 从左向右。</span>
+<span class="hljs-comment">                        up - 向上。</span>
+<span class="hljs-comment">                        down - 向下</span>
+<span class="hljs-comment">                    scrolldelay： 设置每次滚动时的时间间隔（以毫秒为单位）。默认值为 85。 值越大，滚动速度越慢，通常不设置。</span>
+<span class="hljs-comment">                          注意：除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。</span>
+<span class="hljs-comment">                    scrollamount：一次滚动总的时间量，数字越小滚动越慢。</span>
+<span class="hljs-comment">                    behaviour：滚动的方式设置，三种取值：Scroll（循环滚动） lide（单次滚动）、Alternate（来回滚动）。</span>
+<span class="hljs-comment">                    align：文字的对齐方式设置。可选择Middle(居中)、Bottom(居下)还是Top(居上)。</span>
+<span class="hljs-comment">                    width：滚动文本框的宽度，输入一个数值后从后面的单选框选择in Pixels(按像素)或是in Percent(按百分比)。</span>
+<span class="hljs-comment">                    height：滚动文本框的高度，输入一个数值后从后面的单选框选择in Pixels(按像素)或是in Percent(按百分比)。</span>
+<span class="hljs-comment">                    loop：滚动次数。默认值-1，无限次循环</span>
+<span class="hljs-comment">                    hspace、vspace：前后、上下的空行。</span>
+<span class="hljs-comment">                    onMouseOver=&#x27;this.stop()&#x27; 鼠标放上去则暂停</span>
+<span class="hljs-comment">                    onMouseOut=&#x27;this.start()&#x27; 鼠标移开继续滚动</span>
+<span class="hljs-comment">        --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">marquee</span> <span class="hljs-attr">behavior</span>=<span class="hljs-string">&quot;alternate&quot;</span> <span class="hljs-attr">loop</span>=<span class="hljs-string">&quot;2&quot;</span> <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;right&quot;</span> <span class="hljs-attr">scrollamount</span>=<span class="hljs-string">&quot;10&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;今日诗词&quot;</span></span>
+<span class="hljs-tag">                    <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://v2.jinrishici.com/one.svg&quot;</span></span>
+<span class="hljs-tag">                    <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;max-width:100%; display: block; margin: 0 auto;&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">marquee</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ModuleTransition</span>&gt;</span></code></pre></div>
+方式二:</li>
+<li>安装<div class="code-wrapper"><pre><code class="hljs sh">npm -i jinrishici --save</code></pre></div></li>
+<li>使用<br>修改.vuepress/theme/vuepress-theme-reco/components/HomeBlog/index.vue文件<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- html部分 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ModuleTransition</span> <span class="hljs-attr">delay</span>=<span class="hljs-string">&quot;0.08&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">&quot;recoShowModule &amp;&amp; $frontmatter.tagline !== null&quot;</span></span>
+<span class="hljs-tag">                       <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;description&quot;</span>&gt;</span>
+                        &#123;&#123; $frontmatter.tagline || $description || &#x27;Welcome to your vuePress-theme-reco site&#x27; &#125;&#125;
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ModuleTransition</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ModuleTransition</span> <span class="hljs-attr">delay</span>=<span class="hljs-string">&quot;0.12&quot;</span>&gt;</span>
+                    <span class="hljs-comment">&lt;!-- &lt;span class=&quot;jinrishici-sentence&quot;&gt;正在加载今日诗词....&lt;/span&gt; --&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">marquee</span> &gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&#123;&#123;word&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-name">marquee</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ModuleTransition</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- javascript部分 --&gt;</span>
+ data() &#123;
+        return &#123;
+            word: &#x27;正在加载今日诗词....&#x27;,
+        &#125;
+    &#125;,
+    methods: &#123;
+        paginationChange(page) &#123;
+            setTimeout(() =&gt; &#123;
+                window.scrollTo(0, this.heroHeight)
+            &#125;, 100)
+        &#125;,
+        getPagesByTags(tagInfo) &#123;
+            this.$router.push(&#123; path: tagInfo.path &#125;)
+        &#125;,
+        loadSentence: function () &#123;
+            jinrishici.load(result =&gt; &#123;
+                this.word = result.data.content
+            &#125;, err =&gt; &#123;
+                console.log(&quot;test&quot;);
+            &#125;)
+        &#125;
+    &#125;,
+    mounted: function () &#123; this.loadSentence() &#125;</code></pre></div></li>
+</ul>
+<p>8.修改主页背景为随机图片<br>修改.vuepress/theme/vuepress-theme-reco/components/HomeBlog/index.vue</p>
+<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> url = instance.<span class="hljs-property">$frontmatter</span>.<span class="hljs-property">bgImage</span>
+            ? instance.$withBase(instance.<span class="hljs-property">$frontmatter</span>.<span class="hljs-property">bgImage</span>)
+            : <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;../../images/bg.jpg&#x27;</span>)
+<span class="hljs-comment">// 将上面代码修改为以下形式</span>
+<span class="hljs-keyword">const</span> url = instance.<span class="hljs-property">$frontmatter</span>.<span class="hljs-property">bgImage</span>
+            ? instance.$withBase(instance.<span class="hljs-property">$frontmatter</span>.<span class="hljs-property">bgImage</span>)
+            : <span class="hljs-string">&#x27;https://picsum.photos/1600/900&#x27;</span></code></pre></div>
+<p>:::warning<br>若使用随机背景图片，README.md文件中bgImageStyle配置如下即可</p>
+<div class="code-wrapper"><pre><code class="hljs css">bgImageStyle: &#123;
+  <span class="hljs-attribute">height</span>: <span class="hljs-string">&#x27;95vh&#x27;</span>,
+&#125;</code></pre></div>
+<p>:::<br>9.使用v-view插件对图片进行放大缩小</p>
+<ul>
+<li>安装<div class="code-wrapper"><pre><code class="hljs sh">npm install v-viewer --save</code></pre></div></li>
+<li>使用<br>修改.vuepress/theme/vuepress-theme-reco/enhanceApp.js如下所示<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">/* eslint-disable no-proto */</span>
+<span class="hljs-keyword">import</span> postMixin <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@theme/mixins/posts&#x27;</span>
+<span class="hljs-keyword">import</span> localMixin <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@theme/mixins/locales&#x27;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Vue</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vue&#x27;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Viewer</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;v-viewer&#x27;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;viewerjs/dist/viewer.css&#x27;</span>
+<span class="hljs-keyword">import</span> &#123; interceptRouterError, fixRouterError404 &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@theme/helpers/other&#x27;</span>
+<span class="hljs-keyword">import</span> &#123; install &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vue-demi&#x27;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (&#123;
+  <span class="hljs-title class_">Vue</span>,
+  siteData,
+  isServer,
+  router
+&#125;) =&gt; &#123;
+  <span class="hljs-title function_">install</span>(<span class="hljs-title class_">Vue</span>)
+  <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">mixin</span>(postMixin)
+  <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">mixin</span>(localMixin)
+  <span class="hljs-comment">// if (!isServer) &#123;</span>
+  <span class="hljs-comment">//   addScriptToHead(&#x27;//kit.fontawesome.com/51b01de608.js&#x27;)</span>
+  <span class="hljs-comment">//   registerCodeThemeCss(siteData.themeConfig.codeTheme)</span>
+  <span class="hljs-comment">// &#125;</span>
+  <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">use</span>(<span class="hljs-title class_">Viewer</span>)
+  <span class="hljs-title class_">Viewer</span>.<span class="hljs-title function_">setDefaults</span>(&#123;
+    <span class="hljs-title class_">Options</span>: &#123; <span class="hljs-string">&#x27;inline&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;button&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;navbar&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;title&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;toolbar&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;tooltip&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;movable&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;zoomable&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;rotatable&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;scalable&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;transition&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;fullscreen&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;keyboard&#x27;</span>: <span class="hljs-literal">true</span>, <span class="hljs-string">&#x27;url&#x27;</span>: <span class="hljs-string">&#x27;data-source&#x27;</span> &#125;
+  &#125;)
+
+  <span class="hljs-title function_">interceptRouterError</span>(router)
+  <span class="hljs-title function_">fixRouterError404</span>(router)
+&#125;</code></pre></div>
+修改.vuepress/theme/vuepress-theme-reco/components/Page.vue如下<div class="code-wrapper"><pre><code class="hljs html"><span class="hljs-comment">&lt;!-- session添加v-viewer指令 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">&quot;recoShowModule&quot;</span></span>
+<span class="hljs-tag">                     <span class="hljs-attr">v-viewer</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page-title&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>&#123;&#123;$page.title&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">PageInfo</span> <span class="hljs-attr">:pageInfo</span>=<span class="hljs-string">&quot;$page&quot;</span></span>
+<span class="hljs-tag">                              <span class="hljs-attr">:showAccessNumber</span>=<span class="hljs-string">&quot;showAccessNumber&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">PageInfo</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">Content</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;theme-reco-content&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre></div>
+:::warning<br>这里需要关闭vuepress内置的@vuepress/plugin-medium-zoom<div class="code-wrapper"><pre><code class="hljs javascript"><span class="hljs-comment">// 只需将 Options 设置成 false 便可禁用该插件</span>
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;
+  <span class="hljs-attr">plugins</span>: [
+    [<span class="hljs-string">&quot;@vuepress/plugin-medium-zoom&quot;</span>, <span class="hljs-literal">false</span>] <span class="hljs-comment">// disabled.</span>
+  ]
+&#125;;</code></pre></div>
+更新:<br>由于本人是将vuepress-theme-reco主题下载到本地进行修改，所以以上方式并不能关闭vuepress/plugin-medium-zoom插件<br>解决方式:修改.vuepress/theme/vuepress-theme-reco/index.js如下<div class="code-wrapper"><pre><code class="hljs awk">plugins: [
+   <span class="hljs-string">&#x27;@vuepress-reco/back-to-top&#x27;</span>,
+   <span class="hljs-string">&#x27;@vuepress-reco/loading-page&#x27;</span>,
+   <span class="hljs-string">&#x27;@vuepress-reco/pagation&#x27;</span>,
+   <span class="hljs-string">&#x27;@vuepress-reco/comments&#x27;</span>,
+   <span class="hljs-string">&#x27;@vuepress/active-header-links&#x27;</span>,
+   <span class="hljs-regexp">//</span> [<span class="hljs-string">&#x27;@vuepress/medium-zoom&#x27;</span>, &#123;
+   <span class="hljs-regexp">//</span>   selector: <span class="hljs-string">&#x27;.theme-reco-content :not(a) &gt; img&#x27;</span>
+   <span class="hljs-regexp">//</span> &#125;],</code></pre></div>
+只需要将vuepress/medium-zoom插件注释或者删除即可<br>:::</li>
+</ul>
+<h2 id="插件不生效"><a href="#插件不生效" class="headerlink" title="插件不生效"></a>插件不生效</h2><p>在config.js中配置的插件未生效，于是本人根据vuepress加载流程,将插件配置放入了vuepress-theme-reco的index.js中，此时插件生效。</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul>
+<li>nginx配置文件<div class="code-wrapper"><pre><code class="hljs nginx"><span class="hljs-attribute">user</span>  nginx;
+<span class="hljs-attribute">worker_processes</span>  <span class="hljs-number">1</span>;
+
+<span class="hljs-attribute">error_log</span>  /var/log/nginx/<span class="hljs-literal">error</span>.log <span class="hljs-literal">warn</span>;
+<span class="hljs-attribute">pid</span>        /var/run/nginx.pid;
+
+
+<span class="hljs-section">events</span> &#123;
+    <span class="hljs-attribute">worker_connections</span>  <span class="hljs-number">1024</span>;
+&#125;
+
+
+<span class="hljs-section">http</span> &#123;
+	<span class="hljs-comment">#开启gzip压缩加速</span>
+ 	<span class="hljs-attribute">gzip</span> <span class="hljs-literal">on</span>; 
+ 	<span class="hljs-comment">#低于1kb的资源不压缩</span>
+  	<span class="hljs-attribute">gzip_min_length</span> <span class="hljs-number">1k</span>; 
+  	 <span class="hljs-comment">#压缩级别【1-9】，越大压缩率越高，同时消耗cpu资源也越多，建议设置在4左右。</span>
+  	<span class="hljs-attribute">gzip_comp_level</span> <span class="hljs-number">4</span>;
+  	<span class="hljs-comment">#需要压缩哪些响应类型的资源，多个空格隔开。不建议压缩图片</span>
+  	<span class="hljs-attribute">gzip_types</span> text/plain application/javascript application/x-javascript text/javascript text/xml text/css application/json;  
+  	 <span class="hljs-comment">#配置禁用gzip条件，支持正则。此处表示ie6及以下不启用gzip（因为ie低版本不支持）</span>
+  	<span class="hljs-attribute">gzip_disable</span> <span class="hljs-string">&quot;MSIE [1-6]\.&quot;</span>; 
+  	<span class="hljs-comment">#是否添加“Vary: Accept-Encoding”响应头</span>
+  	<span class="hljs-attribute">gzip_vary</span> <span class="hljs-literal">on</span>;  
+
+    <span class="hljs-attribute">include</span>       /etc/nginx/mime.types;
+    <span class="hljs-attribute">default_type</span>  application/octet-stream;
+
+    <span class="hljs-attribute">log_format</span>  main  <span class="hljs-string">&#x27;<span class="hljs-variable">$remote_addr</span> - <span class="hljs-variable">$remote_user</span> [<span class="hljs-variable">$time_local</span>] &quot;<span class="hljs-variable">$request</span>&quot; &#x27;</span>
+                      <span class="hljs-string">&#x27;<span class="hljs-variable">$status</span> <span class="hljs-variable">$body_bytes_sent</span> &quot;<span class="hljs-variable">$http_referer</span>&quot; &#x27;</span>
+                      <span class="hljs-string">&#x27;&quot;<span class="hljs-variable">$http_user_agent</span>&quot; &quot;<span class="hljs-variable">$http_x_forwarded_for</span>&quot;&#x27;</span>;
+
+    <span class="hljs-attribute">access_log</span>  /var/log/nginx/access.log  main;
+
+    <span class="hljs-attribute">sendfile</span>        <span class="hljs-literal">on</span>;
+    <span class="hljs-comment">#tcp_nopush     on;</span>
+
+    <span class="hljs-attribute">keepalive_timeout</span>  <span class="hljs-number">65</span>;
+	<span class="hljs-section">server</span> &#123;
+		<span class="hljs-attribute">listen</span>  <span class="hljs-number">80</span>;
+		<span class="hljs-attribute">server_name</span> blog;
+ 
+		<span class="hljs-section">location</span> /blog_nation &#123;
+			<span class="hljs-attribute">root</span> /usr/share/nginx/html/blog_nation/;
+			<span class="hljs-attribute">index</span>  index.html index.htm;
+		&#125;
+		<span class="hljs-attribute">error_page</span> <span class="hljs-number">500</span> <span class="hljs-number">502</span> <span class="hljs-number">503</span> <span class="hljs-number">504</span> /50x.html;
+		<span class="hljs-section">location</span> = /50x.html &#123;
+			<span class="hljs-attribute">root</span> /usr/share/nginx/html;
+		&#125;
+	&#125;
+&#125;</code></pre></div>
+那如何寻找没有添加的 type 呢？我们打开 Chrome 的「开发者工具」，打开自己的网站，对于「Network」中请求自己网站的包，看是否启动 Gzip，如果「Response Headers」显示「Accept-Ranges: bytes」则表示该包没有开启加速，可以将「Content-Type」后面的值填入「gzip_types」并且使用空格隔开。</li>
+</ul>
+
+                
+              </div>
+            
+            
+              <div class="reward-container">
+    
+    <span class="reward-button hvr-buzz-out">赏</span>
+    <div>您的鼓励，是我最大的动力</div>
+    <div class="reward-pay">
+      
+      <div style="margin: 10px">
+        <img src="/img/wechat.jpg" srcset="/img/loading.gif" lazyload alt="微信" class="wechat" />
+        <p>微信</p>
+      </div>
+      
+      <div style="margin: 10px">
+        <img src="/img/zhifubao.jpg" srcset="/img/loading.gif" lazyload alt="支付宝" class="zhifubao" />
+        <p>支付宝</p>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <script>
+    const rewardButtonDom = document.getElementsByClassName('reward-button')[0]
+    const rewardPayDom = document.getElementsByClassName('reward-pay')[0]
+    rewardButtonDom.addEventListener('mouseenter', function ()  {
+      rewardPayDom.style.display = 'flex'
+    })
+    rewardButtonDom.addEventListener('mouseleave', function ()  {
+      rewardPayDom.style.display = 'none'
+    })
+  </script>
+  
+                        
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/">#博客</a>
+      
+        <a href="/tags/vuepress/">#vuepress</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>vuepress搭建个人博客教程</div>
+      <div>http://www.zibbo.xyz/king/26960e5d.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>King</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年2月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/king/26960e5d.html" title="Redis学习笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Redis学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/king/ea92c0b9.html" title="Java项目部署">
+                        <span class="hidden-mobile">Java项目部署</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"7oE653yNltVkmniTXN57Ko6V-gzGzoHsz","appKey":"bBq8ktn73l0qlxf3BsmGePpg","path":"window.location.pathname","placeholder":"留下你的脚印，在我的世界里","avatar":"mp","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://7oe653yn.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+      <!--《添加网站运行时间 -->
+<br/>
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+var now = new Date(); 
+
+function createtime() {
+    //此处修改你的建站时间或者网站上线时间
+    var grt = new Date('2020/08/30 09:00:00');
+    now.setTime(now.getTime() + 250);
+    days = (now - grt) / 1000 / 60 / 60 / 24;
+
+    dnum = Math.floor(days);
+    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+        hnum = "0" + hnum;
+    }
+    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+        mnum = "0" + mnum;
+    }
+    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+        snum = "0" + snum;
+    }
+    document.getElementById("timeDate").innerHTML = " 本站已安全运行 " + dnum + " 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+}
+setInterval("createtime()", 250);
+</script>
+
+<!-- 添加网站运行时间》-->
+
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      京ICP备2022008369号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/mouse.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
