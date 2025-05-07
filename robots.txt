@@ -1,3 +1,4 @@
+Sitemap: https://www.zibbo.xyz/sitemap.xml
 
 User-agent:*
 Disallow:
